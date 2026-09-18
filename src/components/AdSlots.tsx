@@ -18,7 +18,7 @@ import AdUnit from "@/components/AdUnit";
  */
 
 const Label = () => (
-  <p className="mb-2 text-center text-[0.6rem] font-medium uppercase tracking-[0.25em] text-white/30">
+  <p className="mb-2 text-center text-[0.6rem] font-medium uppercase tracking-[0.25em] text-muted-foreground/60">
     Advertisement
   </p>
 );

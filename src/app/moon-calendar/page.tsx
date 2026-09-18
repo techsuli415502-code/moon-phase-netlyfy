@@ -56,32 +56,32 @@ export default function MoonCalendarPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <nav
             aria-label="Breadcrumb"
-            className="mb-6 text-sm text-white/60"
+            className="mb-6 text-sm text-muted-foreground"
           >
             <ol className="flex flex-wrap items-center gap-2">
               <li>
                 <Link
                   href="/"
-                  className="text-white/60 transition-colors hover:text-[oklch(0.92_0.06_75)]"
+                  className="text-muted-foreground transition-colors hover:text-primary"
                 >
                   Home
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-white" aria-current="page">
+              <li className="text-foreground" aria-current="page">
                 Moon Calendar
               </li>
             </ol>
           </nav>
 
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[oklch(0.92_0.06_75)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
               Plan Around the Moon
             </p>
-            <h1 className="mt-3 text-4xl font-bold tracking-tight text-white glow-text-strong sm:text-5xl">
+            <h1 className="mt-3 text-4xl font-bold tracking-tight text-foreground glow-text-strong sm:text-5xl">
               Moon Phase Calendar
             </h1>
-            <p className="mt-5 text-base leading-relaxed text-white/80">
+            <p className="mt-5 text-base leading-relaxed text-foreground">
               Browse the lunar phase for any day of any month. Tap a day on
               the calendar to see its full Moon phase details, including
               illumination, lunar age, and the matching Moon emoji. Use the
@@ -100,10 +100,10 @@ export default function MoonCalendarPage() {
           <div className="grid gap-6 lg:grid-cols-3">
             <div className="lg:col-span-2">
               <div className="glass-card rounded-2xl p-6 sm:p-8">
-                <h2 className="text-2xl font-bold text-white">
+                <h2 className="text-2xl font-bold text-foreground">
                   How to Read the Calendar
                 </h2>
-                <div className="mt-4 space-y-3 text-sm leading-relaxed text-white/80">
+                <div className="mt-4 space-y-3 text-sm leading-relaxed text-foreground">
                   <p>
                     Each cell on the calendar shows the day of the month with
                     a small Moon emoji. The emoji matches the lunar phase
@@ -140,13 +140,13 @@ export default function MoonCalendarPage() {
       <section className="section-padding">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[oklch(0.92_0.06_75)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
               Legend
             </p>
-            <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+            <h2 className="mt-3 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
               The Eight Moon Emojis
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-white/70">
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               These are the same Moon emojis that appear on the calendar.
               Each one stands for a specific phase in the lunar cycle.
             </p>
@@ -163,7 +163,7 @@ export default function MoonCalendarPage() {
                 >
                   {p.emoji}
                 </div>
-                <p className="mt-3 text-sm font-semibold text-white">
+                <p className="mt-3 text-sm font-semibold text-foreground">
                   {p.name}
                 </p>
               </div>

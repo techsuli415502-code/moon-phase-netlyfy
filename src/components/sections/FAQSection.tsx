@@ -51,16 +51,16 @@ export default function FAQSection() {
     >
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[oklch(0.92_0.06_75)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
             Common Questions
           </p>
           <h2
             id="faq-heading"
-            className="mt-3 text-3xl font-bold tracking-tight text-white glow-text sm:text-4xl"
+            className="mt-3 text-3xl font-bold tracking-tight text-foreground glow-text sm:text-4xl"
           >
             Frequently Asked Questions
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70">
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             Quick answers to the most asked questions about the current Moon
             phase, the lunar cycle, and the moon emojis used on this site.
           </p>
@@ -72,12 +72,12 @@ export default function FAQSection() {
               <AccordionItem
                 key={i}
                 value={`item-${i}`}
-                className="glass-card rounded-xl border border-white/10 px-5 sm:px-6"
+                className="glass-card rounded-xl border border-border px-5 sm:px-6"
               >
-                <AccordionTrigger className="text-left text-base font-semibold text-white hover:no-underline">
+                <AccordionTrigger className="text-left text-base font-semibold text-foreground hover:no-underline">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="pt-2 text-sm leading-relaxed text-white/75">
+                <AccordionContent className="pt-2 text-sm leading-relaxed text-muted-foreground">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>

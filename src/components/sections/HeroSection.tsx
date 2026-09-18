@@ -31,11 +31,11 @@ export default function HeroSection() {
 
       {/* Decorative nebula blobs */}
       <div
-        className="pointer-events-none absolute left-1/4 top-1/4 -z-10 h-72 w-72 rounded-full bg-[oklch(0.55_0.18_285/20%)] blur-3xl nebula"
+        className="pointer-events-none absolute left-1/4 top-1/4 -z-10 h-72 w-72 rounded-full bg-primary/15 blur-3xl nebula"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute right-1/4 bottom-1/4 -z-10 h-80 w-80 rounded-full bg-[oklch(0.6_0.1_230/15%)] blur-3xl nebula"
+        className="pointer-events-none absolute right-1/4 bottom-1/4 -z-10 h-80 w-80 rounded-full bg-secondary/40 blur-3xl nebula"
         style={{ animationDelay: "-12s" }}
         aria-hidden="true"
       />
@@ -46,13 +46,13 @@ export default function HeroSection() {
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
             href="/moon-phases"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[oklch(0.92_0.06_75)] to-[oklch(0.85_0.12_75)] px-6 py-3 text-sm font-semibold text-[oklch(0.12_0.02_270)] shadow-[0_0_24px_rgba(255,235,180,0.35)] transition-transform hover:scale-[1.03] sm:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-primary to-accent px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-transform hover:scale-[1.03] sm:w-auto"
           >
             Browse Moon Phases
           </Link>
           <Link
             href="/moon-calendar"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/10 sm:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-border bg-muted/50 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur-md transition-colors hover:bg-muted sm:w-auto"
           >
             Open Moon Calendar
           </Link>

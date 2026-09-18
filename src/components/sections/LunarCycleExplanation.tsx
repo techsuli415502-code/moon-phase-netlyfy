@@ -62,16 +62,16 @@ export default function LunarCycleExplanation() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[oklch(0.92_0.06_75)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
             How the Cycle Works
           </p>
           <h2
             id="lunar-cycle-heading"
-            className="mt-3 text-3xl font-bold tracking-tight text-white glow-text sm:text-4xl"
+            className="mt-3 text-3xl font-bold tracking-tight text-foreground glow-text sm:text-4xl"
           >
             The Lunar Cycle Explained
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70">
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             The lunar cycle, also called the synodic month, is the journey the
             Moon takes from one New Moon to the next. It takes about 29.53
             days. As the Moon orbits Earth, we see different slices of its
@@ -100,14 +100,14 @@ export default function LunarCycleExplanation() {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-baseline gap-2">
-                        <span className="text-xs font-semibold uppercase tracking-wider text-[oklch(0.92_0.06_75)]">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-primary">
                           Step {i + 1}
                         </span>
                       </div>
-                      <h3 className="mt-1 text-xl font-semibold text-white">
+                      <h3 className="mt-1 text-xl font-semibold text-foreground">
                         {step.name}
                       </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-white/70">
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                         {step.detail}
                       </p>
                     </div>

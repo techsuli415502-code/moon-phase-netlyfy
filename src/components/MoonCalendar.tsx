@@ -100,19 +100,19 @@ export default function MoonCalendar() {
           <button
             type="button"
             onClick={prevMonth}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white/80 hover:bg-white/10 hover:text-white"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-muted/50 text-foreground hover:bg-muted hover:text-foreground"
             aria-label="Previous month"
           >
             <ChevronLeft className="h-4 w-4" />
           </button>
           <div className="text-center">
-            <p className="text-lg font-semibold text-white">
+            <p className="text-lg font-semibold text-foreground">
               {monthName} {year}
             </p>
             <button
               type="button"
               onClick={goToThisMonth}
-              className="text-xs text-[oklch(0.92_0.06_75)] hover:underline"
+              className="text-xs text-primary hover:underline"
             >
               Jump to this month
             </button>
@@ -120,7 +120,7 @@ export default function MoonCalendar() {
           <button
             type="button"
             onClick={nextMonth}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white/80 hover:bg-white/10 hover:text-white"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-muted/50 text-foreground hover:bg-muted hover:text-foreground"
             aria-label="Next month"
           >
             <ChevronRight className="h-4 w-4" />
@@ -131,7 +131,7 @@ export default function MoonCalendar() {
           {WEEKDAYS.map((d) => (
             <div
               key={d}
-              className="py-2 text-[0.7rem] font-semibold uppercase tracking-wide text-white/50"
+              className="py-2 text-[0.7rem] font-semibold uppercase tracking-wide text-muted-foreground"
             >
               {d}
             </div>
@@ -152,10 +152,10 @@ export default function MoonCalendar() {
                 aria-pressed={isSelected}
                 className={`relative flex aspect-square flex-col items-center justify-center rounded-lg border text-sm transition-all ${
                   isSelected
-                    ? "border-[oklch(0.92_0.06_75)] bg-[oklch(0.92_0.06_75/15%)] text-white shadow-[0_0_18px_rgba(255,235,180,0.25)]"
+                    ? "border-[oklch(0.92_0.06_75)] bg-[oklch(0.92_0.06_75/15%)] text-foreground shadow-[0_0_18px_rgba(255,235,180,0.25)]"
                     : isToday
-                    ? "border-[oklch(0.75_0.15_285)] bg-[oklch(0.55_0.18_285/15%)] text-white"
-                    : "border-transparent bg-white/5 text-white/80 hover:bg-white/10 hover:text-white"
+                    ? "border-[oklch(0.75_0.15_285)] bg-primary/10 text-foreground"
+                    : "border-transparent bg-muted/50 text-foreground hover:bg-muted hover:text-foreground"
                 }`}
               >
                 <span className="text-base leading-none sm:text-lg">
@@ -174,7 +174,7 @@ export default function MoonCalendar() {
           })}
         </div>
 
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 border-t border-white/10 pt-4 text-[0.7rem] text-white/60">
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 border-t border-border pt-4 text-[0.7rem] text-muted-foreground">
           {ALL_PHASES.map((p) => (
             <span key={p.key} className="inline-flex items-center gap-1">
               <span aria-hidden="true">{p.emoji}</span>
@@ -186,12 +186,12 @@ export default function MoonCalendar() {
 
       {/* Selected day details */}
       <div className="glass-card rounded-2xl p-5 sm:p-6">
-        <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50">
+        <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
           Selected Day
         </h3>
         {selectedPhase ? (
           <>
-            <p className="mt-2 text-xl font-bold text-white">
+            <p className="mt-2 text-xl font-bold text-foreground">
               {monthName} {selectedDay}, {year}
             </p>
             <div className="mt-4 flex items-center gap-4">
@@ -202,54 +202,54 @@ export default function MoonCalendar() {
                 {selectedPhase.emoji}
               </div>
               <div>
-                <p className="text-lg font-semibold text-white">
+                <p className="text-lg font-semibold text-foreground">
                   {selectedPhase.name}
                 </p>
-                <p className="text-sm text-white/60">
+                <p className="text-sm text-muted-foreground">
                   {selectedPhase.trend === "waxing"
                     ? "Waxing (growing)"
                     : "Waning (shrinking)"}
                 </p>
               </div>
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-white/70">
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               {selectedPhase.description}
             </p>
             <dl className="mt-5 space-y-3 text-sm">
               <div className="flex items-center justify-between">
-                <dt className="text-white/50">Illumination</dt>
-                <dd className="font-semibold text-white">
+                <dt className="text-muted-foreground">Illumination</dt>
+                <dd className="font-semibold text-foreground">
                   {selectedPhase.illumination}%
                 </dd>
               </div>
               <div className="flex items-center justify-between">
-                <dt className="text-white/50">Lunar age</dt>
-                <dd className="font-semibold text-white">
+                <dt className="text-muted-foreground">Lunar age</dt>
+                <dd className="font-semibold text-foreground">
                   {selectedPhase.age} days
                 </dd>
               </div>
               <div className="flex items-center justify-between">
-                <dt className="text-white/50">Cycle progress</dt>
-                <dd className="font-semibold text-white">
+                <dt className="text-muted-foreground">Cycle progress</dt>
+                <dd className="font-semibold text-foreground">
                   {Math.round(selectedPhase.cycleProgress * 100)}%
                 </dd>
               </div>
               <div className="flex items-center justify-between">
-                <dt className="text-white/50">Next full Moon</dt>
-                <dd className="font-semibold text-white">
+                <dt className="text-muted-foreground">Next full Moon</dt>
+                <dd className="font-semibold text-foreground">
                   in {selectedPhase.daysUntilFull} days
                 </dd>
               </div>
               <div className="flex items-center justify-between">
-                <dt className="text-white/50">Next new Moon</dt>
-                <dd className="font-semibold text-white">
+                <dt className="text-muted-foreground">Next new Moon</dt>
+                <dd className="font-semibold text-foreground">
                   in {selectedPhase.daysUntilNew} days
                 </dd>
               </div>
             </dl>
           </>
         ) : (
-          <p className="mt-2 text-sm text-white/60">
+          <p className="mt-2 text-sm text-muted-foreground">
             Tap a day to see its lunar phase details.
           </p>
         )}

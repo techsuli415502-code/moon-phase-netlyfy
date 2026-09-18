@@ -6,24 +6,24 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-auto border-t border-white/10 bg-[oklch(0.06_0.02_275/95%)] backdrop-blur-md">
+    <footer className="mt-auto border-t border-border bg-card/80 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           {/* Brand */}
           <div className="md:col-span-1">
             <Link
               href="/"
-              className="flex items-center gap-2 text-base font-bold text-white"
+              className="flex items-center gap-2 text-base font-bold text-foreground"
             >
               <span
-                className="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-[oklch(0.92_0.06_75)] to-[oklch(0.75_0.15_285)] text-[oklch(0.12_0.02_270)]"
+                className="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-[oklch(0.75_0.15_75)] to-[oklch(0.45_0.2_285)] text-white shadow-sm"
                 aria-hidden="true"
               >
                 <Moon className="h-4 w-4" />
               </span>
               <span className="gradient-text">Moon Phase Emoji</span>
             </Link>
-            <p className="mt-3 text-sm leading-relaxed text-white/60">
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               Your live guide to the current Moon phase, with the right emoji,
               illumination and lunar cycle info for any day.
             </p>
@@ -31,7 +31,7 @@ export default function Footer() {
 
           {/* Site links */}
           <nav aria-label="Footer site links">
-            <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white/50">
+            <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Explore
             </h2>
             <ul className="space-y-2">
@@ -39,7 +39,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/70 transition-colors hover:text-[oklch(0.92_0.06_75)]"
+                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
                   >
                     {link.label}
                   </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
 
           {/* Legal links */}
           <nav aria-label="Footer legal links">
-            <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white/50">
+            <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Info
             </h2>
             <ul className="space-y-2">
@@ -58,7 +58,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/70 transition-colors hover:text-[oklch(0.92_0.06_75)]"
+                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
                   >
                     {link.label}
                   </Link>
@@ -67,7 +67,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="text-sm text-white/70 transition-colors hover:text-[oklch(0.92_0.06_75)]"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
                 >
                   {CONTACT_EMAIL}
                 </a>
@@ -76,8 +76,8 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6">
-          <p className="text-center text-xs text-white/50">
+        <div className="mt-10 border-t border-border pt-6">
+          <p className="text-center text-xs text-muted-foreground">
             &copy; {year} Moon Phase Emoji. All rights reserved. Moon phase
             data is for general reference and education.
           </p>

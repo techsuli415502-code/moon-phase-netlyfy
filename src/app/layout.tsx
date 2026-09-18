@@ -4,7 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StarField from "@/components/StarField";
+import AnchorAd from "@/components/AnchorAd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { SITE_URL, AUTHOR, GOOGLE_SITE_VERIFICATION } from "@/lib/site";
 
@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0a0820",
+  themeColor: "#fbf7f0",
   width: "device-width",
   initialScale: 1,
 };
@@ -29,13 +29,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Current Phase of the Moon Emoji | Moon Phase Today",
+    default: "Current Phase of the Moon as an Emoji | Moon Phase Today",
     template: "%s | Moon Phase Emoji",
   },
   description:
     "See the current phase of the Moon as an emoji. Live lunar phase today with illumination, lunar age, and a full moon phase calendar. Waxing and waning updates in real time.",
   keywords: [
-    "current phase of the moon emoji",
+    "current phase of the moon as an emoji",
     "moon phase today",
     "current moon phase",
     "moon emoji",
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Current Phase of the Moon Emoji | Moon Phase Today",
+    title: "Current Phase of the Moon as an Emoji | Moon Phase Today",
     description:
-      "See the current Moon phase as an emoji. Live lunar phase, illumination, lunar age, and a full moon phase calendar.",
+      "See the current phase of the Moon as an emoji. Live lunar phase, illumination, lunar age, and a full moon phase calendar.",
     url: SITE_URL,
     siteName: "Moon Phase Emoji",
     type: "website",
@@ -70,9 +70,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Current Phase of the Moon Emoji | Moon Phase Today",
+    title: "Current Phase of the Moon as an Emoji | Moon Phase Today",
     description:
-      "See the current Moon phase as an emoji. Live lunar phase, illumination, lunar age, and a full moon phase calendar.",
+      "See the current phase of the Moon as an emoji. Live lunar phase, illumination, lunar age, and a full moon phase calendar.",
   },
   robots: {
     index: true,
@@ -129,7 +129,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" suppressHydrationWarning className="dark" data-scroll-behavior="smooth">
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         <script
           type="application/ld+json"
@@ -141,18 +141,18 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-decor`}
       >
         <GoogleAnalytics />
         <a href="#main" className="skip-link">
           Skip to main content
         </a>
-        <StarField />
         <Header />
         <main id="main" className="flex-1">
           {children}
         </main>
         <Footer />
+        <AnchorAd />
         <Toaster />
       </body>
     </html>

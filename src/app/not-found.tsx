@@ -9,11 +9,11 @@ export default function NotFound() {
   return (
     <div className="relative flex min-h-[70vh] flex-col items-center justify-center px-4 py-20 text-center">
       <div
-        className="pointer-events-none absolute left-1/3 top-1/4 h-72 w-72 rounded-full bg-[oklch(0.55_0.18_285/20%)] blur-3xl nebula"
+        className="pointer-events-none absolute left-1/3 top-1/4 h-72 w-72 rounded-full bg-primary/15 blur-3xl nebula"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute right-1/4 bottom-1/4 h-80 w-80 rounded-full bg-[oklch(0.6_0.1_230/15%)] blur-3xl nebula"
+        className="pointer-events-none absolute right-1/4 bottom-1/4 h-80 w-80 rounded-full bg-secondary/40 blur-3xl nebula"
         style={{ animationDelay: "-12s" }}
         aria-hidden="true"
       />
@@ -25,10 +25,10 @@ export default function NotFound() {
         >
           {"\u{1F314}"}
         </div>
-        <h1 className="mt-6 text-4xl font-bold tracking-tight text-white glow-text-strong sm:text-5xl">
+        <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground glow-text-strong sm:text-5xl">
           Page Not Found
         </h1>
-        <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-white/70">
+        <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
           The page you are looking for is not here. The Moon may have moved
           on, just like this URL. Head back to the homepage to see the
           current lunar phase.
@@ -36,7 +36,7 @@ export default function NotFound() {
         <div className="mt-8">
           <Link
             href="/"
-            className="inline-flex items-center rounded-lg bg-gradient-to-r from-[oklch(0.92_0.06_75)] to-[oklch(0.85_0.12_75)] px-6 py-3 text-sm font-semibold text-[oklch(0.12_0.02_270)] shadow-[0_0_24px_rgba(255,235,180,0.35)] transition-transform hover:scale-[1.03]"
+            className="inline-flex items-center rounded-lg bg-gradient-to-r from-primary to-accent px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-transform hover:scale-[1.03]"
           >
             Back to Homepage
           </Link>

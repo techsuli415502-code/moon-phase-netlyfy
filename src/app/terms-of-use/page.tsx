@@ -55,34 +55,34 @@ export default function TermsPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <nav
             aria-label="Breadcrumb"
-            className="mb-6 text-sm text-white/60"
+            className="mb-6 text-sm text-muted-foreground"
           >
             <ol className="flex flex-wrap items-center gap-2">
               <li>
                 <Link
                   href="/"
-                  className="text-white/60 transition-colors hover:text-[oklch(0.92_0.06_75)]"
+                  className="text-muted-foreground transition-colors hover:text-primary"
                 >
                   Home
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-white" aria-current="page">
+              <li className="text-foreground" aria-current="page">
                 Terms of Use
               </li>
             </ol>
           </nav>
 
-          <h1 className="text-4xl font-bold tracking-tight text-white glow-text-strong sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-foreground glow-text-strong sm:text-5xl">
             Terms of Use
           </h1>
-          <p className="mt-3 text-sm text-white/50">
+          <p className="mt-3 text-sm text-muted-foreground">
             Last updated: {lastUpdated}
           </p>
 
-          <div className="mt-8 space-y-6 text-sm leading-relaxed text-white/80">
+          <div className="mt-8 space-y-6 text-sm leading-relaxed text-foreground">
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Accepting the Terms
               </h2>
               <p className="mt-3">
@@ -94,7 +94,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 What We Provide
               </h2>
               <p className="mt-3">
@@ -113,7 +113,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Accuracy of Lunar Data
               </h2>
               <p className="mt-3">
@@ -132,7 +132,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Acceptable Use
               </h2>
               <p className="mt-3">
@@ -144,7 +144,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Your Content
               </h2>
               <p className="mt-3">
@@ -156,7 +156,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Our Content
               </h2>
               <p className="mt-3">
@@ -173,7 +173,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 External Links
               </h2>
               <p className="mt-3">
@@ -185,7 +185,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Limitation of Liability
               </h2>
               <p className="mt-3">
@@ -198,7 +198,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Changes to the Site
               </h2>
               <p className="mt-3">
@@ -209,7 +209,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Contact
               </h2>
               <p className="mt-3">
@@ -217,7 +217,7 @@ export default function TermsPage() {
                 contact form or email us at{" "}
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="text-[oklch(0.92_0.06_75)] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   {CONTACT_EMAIL}
                 </a>
@@ -229,7 +229,7 @@ export default function TermsPage() {
           <div className="mt-10">
             <Link
               href="/"
-              className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              className="inline-flex items-center rounded-lg border border-border bg-muted/50 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
             >
               Back to Home
             </Link>

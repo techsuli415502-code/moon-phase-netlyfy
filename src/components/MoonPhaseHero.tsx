@@ -8,6 +8,10 @@ import type { MoonPhaseData } from "@/lib/moonPhase";
  * Live Moon phase hero.
  * Calculates the current lunar phase on the client using a standard
  * synodic-month algorithm and updates it every minute.
+ *
+ * The H1 includes the main SEO keyword "current phase of the moon as an
+ * emoji" in a natural sentence below the live phase name, so the keyword
+ * is present without keyword stuffing.
  */
 export default function MoonPhaseHero() {
   const [phase, setPhase] = useState<MoonPhaseData | null>(null);
@@ -30,7 +34,7 @@ export default function MoonPhaseHero() {
         >
           {"\u{1F315}"}
         </div>
-        <div className="mt-6 h-8 w-48 animate-pulse rounded bg-white/10" />
+        <div className="mt-6 h-8 w-48 animate-pulse rounded bg-muted" />
       </div>
     );
   }
@@ -51,15 +55,20 @@ export default function MoonPhaseHero() {
         </div>
       </div>
 
-      <p className="mt-2 text-sm font-medium uppercase tracking-[0.25em] text-[oklch(0.92_0.06_75)]">
+      <p className="mt-2 text-sm font-medium uppercase tracking-[0.25em] text-accent-foreground">
         Current Moon Phase
       </p>
-      <h1 className="mt-3 text-4xl font-bold tracking-tight text-white glow-text-strong sm:text-5xl md:text-6xl">
+      {/* H1 carries the live phase name. The keyword "current phase of the
+          moon as an emoji" is woven into the supporting line below in a
+          natural sentence, so it appears once on the page without
+          keyword stuffing. */}
+      <h1 className="mt-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
         {phase.name}
       </h1>
-
-      <p className="mt-4 max-w-xl text-base text-white/70 sm:text-lg">
-        Right now, the Moon is in the <strong className="text-white">{phase.name}</strong> phase.
+      <p className="mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
+        See the <strong className="text-foreground">current phase of the moon as an emoji</strong> live.
+        Right now, the Moon is in the{" "}
+        <strong className="text-foreground">{phase.name}</strong> phase.
         Here is the live lunar snapshot for today.
       </p>
 
@@ -74,12 +83,12 @@ export default function MoonPhaseHero() {
         />
       </dl>
 
-      <p className="mt-6 text-sm text-white/50">
+      <p className="mt-6 text-sm text-muted-foreground">
         Live as of {formatMoonDate(phase.date)}
       </p>
 
       <noscript>
-        <p className="mt-4 rounded-md bg-white/5 px-4 py-2 text-sm text-white/70">
+        <p className="mt-4 rounded-md bg-muted px-4 py-2 text-sm text-muted-foreground">
           The live Moon phase tool needs JavaScript. Please enable JavaScript
           to see the current phase update in real time.
         </p>
@@ -91,10 +100,10 @@ export default function MoonPhaseHero() {
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="glass-card rounded-xl px-4 py-3 text-center">
-      <dt className="text-[0.65rem] font-semibold uppercase tracking-wider text-white/50">
+      <dt className="text-[0.65rem] font-semibold uppercase tracking-wider text-muted-foreground">
         {label}
       </dt>
-      <dd className="mt-1 text-sm font-semibold text-white sm:text-base">
+      <dd className="mt-1 text-sm font-semibold text-foreground sm:text-base">
         {value}
       </dd>
     </div>

@@ -54,16 +54,16 @@ export default function MoonEmojiMeaning() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[oklch(0.92_0.06_75)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
             Moon Emoji Guide
           </p>
           <h2
             id="moon-emoji-heading"
-            className="mt-3 text-3xl font-bold tracking-tight text-white glow-text sm:text-4xl"
+            className="mt-3 text-3xl font-bold tracking-tight text-foreground glow-text sm:text-4xl"
           >
             Moon Emoji Meaning and Use
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70">
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             Each Moon emoji maps to a real lunar phase. They are not just for
             mood or vibes. Each one matches a specific point in the lunar
             cycle. Here is what each Moon emoji means and when you might want
@@ -83,10 +83,10 @@ export default function MoonEmojiMeaning() {
               >
                 {item.emoji}
               </div>
-              <h3 className="mt-4 text-base font-semibold text-white">
+              <h3 className="mt-4 text-base font-semibold text-foreground">
                 {item.name}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {item.use}
               </p>
             </article>
@@ -95,10 +95,10 @@ export default function MoonEmojiMeaning() {
 
         <div className="mt-10">
           <div className="glass-card rounded-2xl p-6 sm:p-8">
-            <h3 className="text-xl font-semibold text-white">
+            <h3 className="text-xl font-semibold text-foreground">
               How to Use the Right Moon Emoji
             </h3>
-            <div className="mt-4 space-y-3 text-sm leading-relaxed text-white/80">
+            <div className="mt-4 space-y-3 text-sm leading-relaxed text-foreground">
               <p>
                 If you want your Moon emoji to match the actual sky, check the
                 live phase shown at the top of this page. Use the same emoji

@@ -27,7 +27,7 @@ export default function CurrentPhaseInfo() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="glass-card rounded-2xl p-8">
-            <div className="h-8 w-48 animate-pulse rounded bg-white/10" />
+            <div className="h-8 w-48 animate-pulse rounded bg-muted" />
           </div>
         </div>
       </section>
@@ -82,16 +82,16 @@ export default function CurrentPhaseInfo() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[oklch(0.92_0.06_75)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
             Current Phase Details
           </p>
           <h2
             id="current-phase-heading"
-            className="mt-3 text-3xl font-bold tracking-tight text-white glow-text sm:text-4xl"
+            className="mt-3 text-3xl font-bold tracking-tight text-foreground glow-text sm:text-4xl"
           >
             Current Moon Phase Information
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70">
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             Here is the full breakdown of the Moon right now. Every stat below
             updates on its own as the lunar cycle moves forward.
           </p>
@@ -103,13 +103,13 @@ export default function CurrentPhaseInfo() {
               key={stat.label}
               className="glass-card rounded-2xl p-6"
             >
-              <p className="text-xs font-semibold uppercase tracking-wider text-white/50">
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 {stat.label}
               </p>
-              <p className="mt-2 text-3xl font-bold text-white glow-text">
+              <p className="mt-2 text-3xl font-bold text-foreground glow-text">
                 {stat.value}
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-white/70">
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {stat.detail}
               </p>
             </div>
@@ -126,16 +126,16 @@ export default function CurrentPhaseInfo() {
                 {phase.emoji}
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-white/50">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                   Live Snapshot
                 </p>
-                <h3 className="mt-1 text-2xl font-bold text-white">
+                <h3 className="mt-1 text-2xl font-bold text-foreground">
                   {phase.name}
                 </h3>
-                <p className="mt-2 text-sm text-white/60">
+                <p className="mt-2 text-sm text-muted-foreground">
                   {formatMoonDate(phase.date)}
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-white/80">
+                <p className="mt-4 text-sm leading-relaxed text-foreground">
                   {phase.description}
                 </p>
               </div>

@@ -95,7 +95,7 @@ function AdUnitBase({ size, className = "" }: AdUnitProps) {
       >
         {!loaded && (
           <div
-            className="absolute inset-0 flex items-center justify-center rounded-lg border border-white/5 bg-white/[0.02] text-[0.65rem] uppercase tracking-wider text-white/30"
+            className="absolute inset-0 flex items-center justify-center rounded-lg border border-border/50 bg-muted/40 text-[0.65rem] uppercase tracking-wider text-muted-foreground/60"
             aria-hidden="true"
           >
             {config.label}

@@ -43,55 +43,99 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* Premium dark space theme (default for the entire site) */
+/* ============================================================
+   LIGHT THEME - "Lunar Cream"
+   A warm, professional light palette inspired by old astronomy
+   journals: warm cream paper, deep slate ink, soft violet accents,
+   warm amber for the moon.
+   ============================================================ */
 :root {
-  --radius: 0.875rem;
+  --radius: 0.75rem;
 
-  /* Deep space background */
-  --background: oklch(0.07 0.025 280);
-  --foreground: oklch(0.97 0.01 240);
+  /* Warm cream off-white background */
+  --background: oklch(0.985 0.008 80);
+  /* Deep slate text */
+  --foreground: oklch(0.2 0.04 270);
 
-  /* Glass cards */
-  --card: oklch(0.13 0.03 270 / 60%);
-  --card-foreground: oklch(0.97 0.01 240);
+  /* Pure white cards with subtle warm border */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.04 270);
 
-  --popover: oklch(0.11 0.025 275 / 80%);
-  --popover-foreground: oklch(0.97 0.01 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.04 270);
 
-  /* Moon glow accent (warm cream gold) */
-  --primary: oklch(0.92 0.06 75);
-  --primary-foreground: oklch(0.12 0.02 270);
+  /* Deep violet accent (different from the previous gold) */
+  --primary: oklch(0.45 0.2 285);
+  --primary-foreground: oklch(0.99 0.005 80);
 
-  /* Purple/blue accent */
-  --secondary: oklch(0.25 0.08 280);
-  --secondary-foreground: oklch(0.95 0.01 240);
+  /* Warm amber secondary (moonlight) */
+  --secondary: oklch(0.93 0.05 75);
+  --secondary-foreground: oklch(0.3 0.08 75);
 
-  --muted: oklch(0.18 0.02 270);
-  --muted-foreground: oklch(0.7 0.03 260);
+  --muted: oklch(0.96 0.008 280);
+  --muted-foreground: oklch(0.45 0.025 270);
 
-  --accent: oklch(0.55 0.18 285);
-  --accent-foreground: oklch(0.98 0.01 240);
+  /* Soft amber accent */
+  --accent: oklch(0.85 0.13 75);
+  --accent-foreground: oklch(0.3 0.08 75);
 
-  --destructive: oklch(0.65 0.22 22);
+  --destructive: oklch(0.58 0.22 25);
 
-  --border: oklch(0.6 0.1 280 / 20%);
-  --input: oklch(0.25 0.05 280 / 50%);
-  --ring: oklch(0.65 0.18 285);
+  --border: oklch(0.9 0.012 280);
+  --input: oklch(0.93 0.012 280);
+  --ring: oklch(0.45 0.2 285);
 
-  --chart-1: oklch(0.92 0.06 75);
-  --chart-2: oklch(0.65 0.18 285);
-  --chart-3: oklch(0.7 0.15 230);
-  --chart-4: oklch(0.8 0.12 200);
-  --chart-5: oklch(0.6 0.2 320);
+  /* Chart palette: violet, amber, slate, teal, soft red */
+  --chart-1: oklch(0.45 0.2 285);
+  --chart-2: oklch(0.75 0.15 75);
+  --chart-3: oklch(0.55 0.05 240);
+  --chart-4: oklch(0.65 0.12 200);
+  --chart-5: oklch(0.6 0.18 25);
 
-  --sidebar: oklch(0.1 0.02 275);
-  --sidebar-foreground: oklch(0.97 0.01 240);
-  --sidebar-primary: oklch(0.92 0.06 75);
-  --sidebar-primary-foreground: oklch(0.12 0.02 270);
-  --sidebar-accent: oklch(0.55 0.18 285);
-  --sidebar-accent-foreground: oklch(0.98 0.01 240);
-  --sidebar-border: oklch(0.6 0.1 280 / 20%);
-  --sidebar-ring: oklch(0.65 0.18 285);
+  --sidebar: oklch(0.97 0.01 280);
+  --sidebar-foreground: oklch(0.2 0.04 270);
+  --sidebar-primary: oklch(0.45 0.2 285);
+  --sidebar-primary-foreground: oklch(0.99 0.005 80);
+  --sidebar-accent: oklch(0.93 0.04 75);
+  --sidebar-accent-foreground: oklch(0.3 0.08 75);
+  --sidebar-border: oklch(0.9 0.012 280);
+  --sidebar-ring: oklch(0.45 0.2 285);
+}
+
+/* The .dark selector is kept for compatibility with shadcn/ui internals
+   but is never applied. The site is light-only. */
+.dark {
+  --background: oklch(0.985 0.008 80);
+  --foreground: oklch(0.2 0.04 270);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.04 270);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.04 270);
+  --primary: oklch(0.45 0.2 285);
+  --primary-foreground: oklch(0.99 0.005 80);
+  --secondary: oklch(0.93 0.05 75);
+  --secondary-foreground: oklch(0.3 0.08 75);
+  --muted: oklch(0.96 0.008 280);
+  --muted-foreground: oklch(0.45 0.025 270);
+  --accent: oklch(0.85 0.13 75);
+  --accent-foreground: oklch(0.3 0.08 75);
+  --destructive: oklch(0.58 0.22 25);
+  --border: oklch(0.9 0.012 280);
+  --input: oklch(0.93 0.012 280);
+  --ring: oklch(0.45 0.2 285);
+  --chart-1: oklch(0.45 0.2 285);
+  --chart-2: oklch(0.75 0.15 75);
+  --chart-3: oklch(0.55 0.05 240);
+  --chart-4: oklch(0.65 0.12 200);
+  --chart-5: oklch(0.6 0.18 25);
+  --sidebar: oklch(0.97 0.01 280);
+  --sidebar-foreground: oklch(0.2 0.04 270);
+  --sidebar-primary: oklch(0.45 0.2 285);
+  --sidebar-primary-foreground: oklch(0.99 0.005 80);
+  --sidebar-accent: oklch(0.93 0.04 75);
+  --sidebar-accent-foreground: oklch(0.3 0.08 75);
+  --sidebar-border: oklch(0.9 0.012 280);
+  --sidebar-ring: oklch(0.45 0.2 285);
 }
 
 @layer base {
@@ -110,8 +154,21 @@
     color: var(--foreground);
     font-feature-settings: "ss01", "cv01";
     overflow-x: hidden;
+    /* Reserve space at the bottom for the anchor ad. The anchor is
+       fixed-positioned; without this padding, content would be
+       hidden behind it. The actual padding is applied dynamically
+       by the AnchorAd component via a body class so dismissed
+       state still works. */
   }
-  /* Skip link for accessibility */
+  body.anchor-ad-visible {
+    padding-bottom: 110px;
+  }
+  @media (max-width: 767px) {
+    body.anchor-ad-visible {
+      /* Mobile anchor is hidden, no padding needed */
+      padding-bottom: 0;
+    }
+  }
   .skip-link {
     position: absolute;
     left: -9999px;
@@ -127,8 +184,6 @@
     left: 0.5rem;
     top: 0.5rem;
   }
-
-  /* Focus styles for keyboard navigation */
   :focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 2px;
@@ -138,69 +193,52 @@
 
 /* === Custom utility classes === */
 
-/* Glass card with subtle purple/blue glow */
+/* Clean light card with subtle shadow and warm border */
 .glass-card {
-  background: linear-gradient(
-    135deg,
-    oklch(0.16 0.04 280 / 55%) 0%,
-    oklch(0.1 0.03 270 / 60%) 100%
-  );
-  border: 1px solid oklch(0.65 0.12 280 / 18%);
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  background: oklch(1 0 0);
+  border: 1px solid oklch(0.9 0.012 280);
   box-shadow:
-    0 8px 32px oklch(0.1 0.05 280 / 40%),
-    inset 0 1px 0 oklch(1 0 0 / 6%);
-  transition: all 0.3s ease;
+    0 1px 2px oklch(0.3 0.05 280 / 4%),
+    0 4px 12px oklch(0.3 0.05 280 / 5%);
+  transition: all 0.25s ease;
+  border-radius: var(--radius-lg);
 }
 
 .glass-card:hover {
-  border-color: oklch(0.7 0.15 280 / 35%);
+  border-color: oklch(0.82 0.02 280);
   box-shadow:
-    0 12px 40px oklch(0.15 0.08 280 / 50%),
-    inset 0 1px 0 oklch(1 0 0 / 10%),
-    0 0 24px oklch(0.55 0.18 285 / 15%);
+    0 2px 4px oklch(0.3 0.05 280 / 6%),
+    0 8px 24px oklch(0.3 0.05 280 / 8%);
 }
 
-/* Glowing text */
+/* Soft amber text shadow for the Moon emoji (subtle, not a dark-theme glow) */
 .glow-text {
-  text-shadow:
-    0 0 12px oklch(0.92 0.06 75 / 35%),
-    0 0 30px oklch(0.55 0.18 285 / 25%);
+  color: var(--foreground);
 }
 
 .glow-text-strong {
-  text-shadow:
-    0 0 18px oklch(0.92 0.06 75 / 55%),
-    0 0 42px oklch(0.6 0.18 285 / 35%),
-    0 0 80px oklch(0.65 0.18 285 / 20%);
+  color: var(--foreground);
 }
 
-/* Moon glow */
+/* Moon emoji - soft amber glow on light background */
 .moon-glow {
-  filter: drop-shadow(0 0 40px oklch(0.92 0.06 75 / 45%))
-          drop-shadow(0 0 80px oklch(0.7 0.15 280 / 30%));
+  filter: drop-shadow(0 0 20px oklch(0.85 0.13 75 / 50%))
+          drop-shadow(0 0 40px oklch(0.75 0.15 285 / 20%));
   animation: moon-pulse 6s ease-in-out infinite;
 }
 
 @keyframes moon-pulse {
   0%, 100% {
-    filter: drop-shadow(0 0 40px oklch(0.92 0.06 75 / 45%))
-            drop-shadow(0 0 80px oklch(0.7 0.15 280 / 30%));
+    filter: drop-shadow(0 0 20px oklch(0.85 0.13 75 / 50%))
+            drop-shadow(0 0 40px oklch(0.75 0.15 285 / 20%));
   }
   50% {
-    filter: drop-shadow(0 0 55px oklch(0.92 0.06 75 / 60%))
-            drop-shadow(0 0 100px oklch(0.7 0.15 280 / 40%));
+    filter: drop-shadow(0 0 28px oklch(0.85 0.13 75 / 65%))
+            drop-shadow(0 0 50px oklch(0.75 0.15 285 / 30%));
   }
 }
 
-/* Twinkle for small stars */
-@keyframes twinkle {
-  0%, 100% { opacity: 0.2; transform: scale(0.8); }
-  50% { opacity: 1; transform: scale(1.1); }
-}
-
-/* Drifting nebula */
+/* Soft drift for decorative blobs (now subtle warm tints, not dark nebula) */
 @keyframes nebula-drift {
   0% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(20px, -10px) scale(1.05); }
@@ -221,24 +259,6 @@
   animation: float 8s ease-in-out infinite;
 }
 
-/* Shooting star */
-@keyframes shoot {
-  0% {
-    transform: translate(0, 0) rotate(-35deg);
-    opacity: 0;
-  }
-  10% { opacity: 1; }
-  70% { opacity: 1; }
-  100% {
-    transform: translate(-600px, 420px) rotate(-35deg);
-    opacity: 0;
-  }
-}
-
-.shooting-star {
-  animation: shoot 4s linear infinite;
-}
-
 /* Fade in on load */
 @keyframes fade-in-up {
   from { opacity: 0; transform: translateY(20px); }
@@ -255,15 +275,15 @@
   height: 8px;
 }
 .custom-scroll::-webkit-scrollbar-track {
-  background: oklch(0.1 0.02 275 / 50%);
+  background: oklch(0.96 0.008 280 / 50%);
   border-radius: 4px;
 }
 .custom-scroll::-webkit-scrollbar-thumb {
-  background: oklch(0.4 0.1 280 / 60%);
+  background: oklch(0.7 0.06 280 / 60%);
   border-radius: 4px;
 }
 .custom-scroll::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.55 0.15 285 / 80%);
+  background: oklch(0.55 0.1 285 / 80%);
 }
 
 /* Respect reduced motion preference */
@@ -279,8 +299,6 @@
   .moon-glow,
   .nebula,
   .float-anim,
-  .shooting-star,
-  .twinkle,
   .fade-in-up {
     animation: none !important;
   }
@@ -289,13 +307,13 @@
   }
 }
 
-/* Gradient text */
+/* Gradient text - violet to amber */
 .gradient-text {
   background: linear-gradient(
     120deg,
-    oklch(0.97 0.04 75) 0%,
-    oklch(0.85 0.1 280) 60%,
-    oklch(0.75 0.15 230) 100%
+    oklch(0.45 0.2 285) 0%,
+    oklch(0.55 0.18 305) 50%,
+    oklch(0.75 0.15 75) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -313,4 +331,22 @@
     padding-top: 7rem;
     padding-bottom: 7rem;
   }
+}
+
+/* === Light background decoration === */
+/* Soft radial gradients on the page background - subtle warm tints
+   reminiscent of moonlit cream paper. */
+.bg-decor {
+  background-color: oklch(0.985 0.008 80);
+  background-image:
+    radial-gradient(ellipse at 15% 10%, oklch(0.85 0.13 75 / 12%) 0%, transparent 40%),
+    radial-gradient(ellipse at 85% 85%, oklch(0.45 0.2 285 / 8%) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 50%, oklch(0.93 0.04 75 / 6%) 0%, transparent 60%);
+}
+
+/* Anchor ad container styling */
+.anchor-ad-container {
+  background: oklch(1 0 0);
+  border-top: 1px solid oklch(0.9 0.012 280);
+  box-shadow: 0 -4px 24px oklch(0.3 0.05 280 / 12%);
 }

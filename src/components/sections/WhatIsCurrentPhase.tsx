@@ -14,16 +14,16 @@ export default function WhatIsCurrentPhase() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[oklch(0.92_0.06_75)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
               What It Means
             </p>
             <h2
               id="what-is-current-heading"
-              className="mt-3 text-3xl font-bold tracking-tight text-white glow-text sm:text-4xl"
+              className="mt-3 text-3xl font-bold tracking-tight text-foreground glow-text sm:text-4xl"
             >
               What Is the Current Phase of the Moon?
             </h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-white/80">
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-foreground">
               <p>
                 The current phase of the Moon tells you how the Moon looks from
                 Earth right now. The Moon itself does not actually change
@@ -54,13 +54,13 @@ export default function WhatIsCurrentPhase() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/moon-phases"
-                className="inline-flex items-center rounded-lg bg-gradient-to-r from-[oklch(0.92_0.06_75)] to-[oklch(0.85_0.12_75)] px-6 py-3 text-sm font-semibold text-[oklch(0.12_0.02_270)] shadow-[0_0_24px_rgba(255,235,180,0.3)] transition-transform hover:scale-[1.03]"
+                className="inline-flex items-center rounded-lg bg-gradient-to-r from-primary to-accent px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-transform hover:scale-[1.03]"
               >
                 See All Moon Phases
               </Link>
               <Link
                 href="/moon-calendar"
-                className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                className="inline-flex items-center rounded-lg border border-border bg-muted/50 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
               >
                 Open Moon Calendar
               </Link>
@@ -69,14 +69,14 @@ export default function WhatIsCurrentPhase() {
 
           <div className="glass-card relative overflow-hidden rounded-2xl p-8 sm:p-10">
             <div
-              className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[oklch(0.55_0.18_285/25%)] blur-3xl nebula"
+              className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/20 blur-3xl nebula"
               aria-hidden="true"
             />
             <div className="relative">
-              <h3 className="text-xl font-semibold text-white">
+              <h3 className="text-xl font-semibold text-foreground">
                 Quick Facts About the Moon Phase
               </h3>
-              <ul className="mt-4 space-y-3 text-sm text-white/80">
+              <ul className="mt-4 space-y-3 text-sm text-foreground">
                 <li className="flex items-start gap-3">
                   <span
                     className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[oklch(0.92_0.06_75)]"

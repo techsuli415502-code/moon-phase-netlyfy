@@ -55,34 +55,34 @@ export default function PrivacyPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <nav
             aria-label="Breadcrumb"
-            className="mb-6 text-sm text-white/60"
+            className="mb-6 text-sm text-muted-foreground"
           >
             <ol className="flex flex-wrap items-center gap-2">
               <li>
                 <Link
                   href="/"
-                  className="text-white/60 transition-colors hover:text-[oklch(0.92_0.06_75)]"
+                  className="text-muted-foreground transition-colors hover:text-primary"
                 >
                   Home
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-white" aria-current="page">
+              <li className="text-foreground" aria-current="page">
                 Privacy Policy
               </li>
             </ol>
           </nav>
 
-          <h1 className="text-4xl font-bold tracking-tight text-white glow-text-strong sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-foreground glow-text-strong sm:text-5xl">
             Privacy Policy
           </h1>
-          <p className="mt-3 text-sm text-white/50">
+          <p className="mt-3 text-sm text-muted-foreground">
             Last updated: {lastUpdated}
           </p>
 
-          <div className="mt-8 space-y-6 text-sm leading-relaxed text-white/80">
+          <div className="mt-8 space-y-6 text-sm leading-relaxed text-foreground">
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Overview
               </h2>
               <p className="mt-3">
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Google Analytics and Cookies
               </h2>
               <p className="mt-3">
@@ -134,7 +134,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Advertising
               </h2>
               <p className="mt-3">
@@ -147,7 +147,7 @@ export default function PrivacyPage() {
               </p>
               <p className="mt-3">
                 Each ad unit is clearly labeled as
-                <span className="text-white"> Advertisement</span>. Ads never
+                <span className="text-foreground"> Advertisement</span>. Ads never
                 cover the navigation, buttons, the live Moon phase tool, or
                 the interactive calendar. On small screens, the wider
                 desktop ad units are hidden so the page stays usable and
@@ -161,7 +161,7 @@ export default function PrivacyPage() {
                   href="https://www.aboutads.info/choices/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[oklch(0.92_0.06_75)] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   aboutads.info/choices
                 </a>{" "}
@@ -171,7 +171,7 @@ export default function PrivacyPage() {
                   href="https://www.youronlinechoices.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[oklch(0.92_0.06_75)] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   youronlinechoices.com
                 </a>
@@ -182,7 +182,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Information You Choose to Share
               </h2>
               <p className="mt-3">
@@ -200,7 +200,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Server and Hosting Logs
               </h2>
               <p className="mt-3">
@@ -214,7 +214,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 External Links
               </h2>
               <p className="mt-3">
@@ -227,7 +227,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Children
               </h2>
               <p className="mt-3">
@@ -239,7 +239,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Your Choices
               </h2>
               <p className="mt-3">
@@ -251,7 +251,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Changes to This Policy
               </h2>
               <p className="mt-3">
@@ -263,7 +263,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-foreground">
                 Contact
               </h2>
               <p className="mt-3">
@@ -271,7 +271,7 @@ export default function PrivacyPage() {
                 out through the contact form or email us at{" "}
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="text-[oklch(0.92_0.06_75)] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   {CONTACT_EMAIL}
                 </a>
@@ -283,7 +283,7 @@ export default function PrivacyPage() {
           <div className="mt-10">
             <Link
               href="/"
-              className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              className="inline-flex items-center rounded-lg border border-border bg-muted/50 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
             >
               Back to Home
             </Link>

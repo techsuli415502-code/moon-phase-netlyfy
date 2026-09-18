@@ -36,8 +36,8 @@ export default function ContactForm() {
 
   return (
     <div className="glass-card rounded-2xl p-6 sm:p-8">
-      <h2 className="text-xl font-semibold text-white">Send a Message</h2>
-      <p className="mt-2 text-sm text-white/70">
+      <h2 className="text-xl font-semibold text-foreground">Send a Message</h2>
+      <p className="mt-2 text-sm text-muted-foreground">
         Fill out the form below and your email client will open with the
         message ready to send. Nothing is stored on our servers.
       </p>
@@ -51,7 +51,7 @@ export default function ContactForm() {
           <div>
             <Label
               htmlFor="name"
-              className="text-sm font-medium text-white"
+              className="text-sm font-medium text-foreground"
             >
               Your Name
             </Label>
@@ -62,14 +62,14 @@ export default function ContactForm() {
               autoComplete="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="mt-1.5 bg-white/5 border-white/15 text-white placeholder:text-white/40"
+              className="mt-1.5 bg-muted/50 border-border text-foreground placeholder:text-muted-foreground/80"
               placeholder="Jane Doe"
             />
           </div>
           <div>
             <Label
               htmlFor="email"
-              className="text-sm font-medium text-white"
+              className="text-sm font-medium text-foreground"
             >
               Your Email
             </Label>
@@ -80,7 +80,7 @@ export default function ContactForm() {
               autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1.5 bg-white/5 border-white/15 text-white placeholder:text-white/40"
+              className="mt-1.5 bg-muted/50 border-border text-foreground placeholder:text-muted-foreground/80"
               placeholder="you@example.com"
             />
           </div>
@@ -89,7 +89,7 @@ export default function ContactForm() {
         <div>
           <Label
             htmlFor="subject"
-            className="text-sm font-medium text-white"
+            className="text-sm font-medium text-foreground"
           >
             Subject
           </Label>
@@ -99,7 +99,7 @@ export default function ContactForm() {
             type="text"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="mt-1.5 bg-white/5 border-white/15 text-white placeholder:text-white/40"
+            className="mt-1.5 bg-muted/50 border-border text-foreground placeholder:text-muted-foreground/80"
             placeholder="Question about the Moon phase"
           />
         </div>
@@ -107,7 +107,7 @@ export default function ContactForm() {
         <div>
           <Label
             htmlFor="message"
-            className="text-sm font-medium text-white"
+            className="text-sm font-medium text-foreground"
           >
             Message
           </Label>
@@ -118,19 +118,19 @@ export default function ContactForm() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             rows={6}
-            className="mt-1.5 bg-white/5 border-white/15 text-white placeholder:text-white/40"
+            className="mt-1.5 bg-muted/50 border-border text-foreground placeholder:text-muted-foreground/80"
             placeholder="Tell me what is on your mind."
           />
         </div>
 
         <div className="flex items-center justify-between gap-4">
-          <p className="text-xs text-white/50">
+          <p className="text-xs text-muted-foreground">
             By sending this message you agree to be contacted at the email
             you provide.
           </p>
           <Button
             type="submit"
-            className="bg-gradient-to-r from-[oklch(0.92_0.06_75)] to-[oklch(0.85_0.12_75)] text-[oklch(0.12_0.02_270)] hover:opacity-90"
+            className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90"
           >
             <Send className="h-4 w-4" aria-hidden="true" />
             Send

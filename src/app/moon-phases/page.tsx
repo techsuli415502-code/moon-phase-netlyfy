@@ -56,19 +56,19 @@ export default function MoonPhasesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <nav
             aria-label="Breadcrumb"
-            className="mb-6 text-sm text-white/60"
+            className="mb-6 text-sm text-muted-foreground"
           >
             <ol className="flex flex-wrap items-center gap-2">
               <li>
                 <Link
                   href="/"
-                  className="text-white/60 transition-colors hover:text-[oklch(0.92_0.06_75)]"
+                  className="text-muted-foreground transition-colors hover:text-primary"
                 >
                   Home
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-white" aria-current="page">
+              <li className="text-foreground" aria-current="page">
                 Moon Phases
               </li>
             </ol>
@@ -76,18 +76,18 @@ export default function MoonPhasesPage() {
 
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[oklch(0.92_0.06_75)]">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
                 The Eight Lunar Phases
               </p>
-              <h1 className="mt-3 text-4xl font-bold tracking-tight text-white glow-text-strong sm:text-5xl">
+              <h1 className="mt-3 text-4xl font-bold tracking-tight text-foreground glow-text-strong sm:text-5xl">
                 Moon Phases, Explained Simply
               </h1>
-              <p className="mt-5 text-base leading-relaxed text-white/80">
+              <p className="mt-5 text-base leading-relaxed text-foreground">
                 The Moon goes through eight named phases each lunar cycle. This
                 page shows the current phase, walks through all eight phases in
                 order, and explains how the cycle repeats month after month.
               </p>
-              <p className="mt-4 text-base leading-relaxed text-white/80">
+              <p className="mt-4 text-base leading-relaxed text-foreground">
                 Every phase has a meaning, a visibility window, and a matching
                 moon emoji. Use this page as a quick reference whenever you
                 want to know what the Moon is doing tonight or any other night.
@@ -95,13 +95,13 @@ export default function MoonPhasesPage() {
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
                   href="/moon-calendar"
-                  className="inline-flex items-center rounded-lg bg-gradient-to-r from-[oklch(0.92_0.06_75)] to-[oklch(0.85_0.12_75)] px-6 py-3 text-sm font-semibold text-[oklch(0.12_0.02_270)] shadow-[0_0_24px_rgba(255,235,180,0.35)] transition-transform hover:scale-[1.03]"
+                  className="inline-flex items-center rounded-lg bg-gradient-to-r from-primary to-accent px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-transform hover:scale-[1.03]"
                 >
                   Open Moon Calendar
                 </Link>
                 <Link
                   href="/sources"
-                  className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                  className="inline-flex items-center rounded-lg border border-border bg-muted/50 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
                 >
                   View Sources
                 </Link>
@@ -120,17 +120,17 @@ export default function MoonPhasesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="glass-card rounded-2xl p-6 sm:p-10">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-2xl font-bold text-white sm:text-3xl">
+              <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
                 Want to Track the Moon Over Time?
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-white/75">
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                 The Moon phase calendar shows you the phase for every day of
                 the month. Tap any day to see its full lunar snapshot, with
                 illumination, lunar age, and more.
               </p>
               <Link
                 href="/moon-calendar"
-                className="mt-6 inline-flex items-center rounded-lg bg-gradient-to-r from-[oklch(0.92_0.06_75)] to-[oklch(0.85_0.12_75)] px-6 py-3 text-sm font-semibold text-[oklch(0.12_0.02_270)] shadow-[0_0_24px_rgba(255,235,180,0.35)] transition-transform hover:scale-[1.03]"
+                className="mt-6 inline-flex items-center rounded-lg bg-gradient-to-r from-primary to-accent px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-transform hover:scale-[1.03]"
               >
                 Open Moon Calendar
               </Link>

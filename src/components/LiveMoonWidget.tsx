@@ -24,7 +24,7 @@ export default function LiveMoonWidget() {
         <div className="text-6xl moon-glow" aria-hidden="true">
           {"\u{1F315}"}
         </div>
-        <div className="mt-4 h-6 w-40 animate-pulse rounded bg-white/10" />
+        <div className="mt-4 h-6 w-40 animate-pulse rounded bg-muted" />
       </div>
     );
   }
@@ -42,13 +42,13 @@ export default function LiveMoonWidget() {
         >
           {phase.emoji}
         </div>
-        <p className="mt-4 text-xs font-semibold uppercase tracking-[0.25em] text-[oklch(0.92_0.06_75)]">
+        <p className="mt-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
           Current Moon Phase
         </p>
-        <h2 className="mt-2 text-3xl font-bold text-white glow-text">
+        <h2 className="mt-2 text-3xl font-bold text-foreground glow-text">
           {phase.name}
         </h2>
-        <p className="mt-2 text-sm text-white/50">
+        <p className="mt-2 text-sm text-muted-foreground">
           {formatMoonDate(phase.date)}
         </p>
       </div>
@@ -63,7 +63,7 @@ export default function LiveMoonWidget() {
         />
       </dl>
 
-      <p className="mt-6 text-sm leading-relaxed text-white/70">
+      <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
         {phase.description}
       </p>
     </div>
@@ -72,11 +72,11 @@ export default function LiveMoonWidget() {
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-center">
-      <dt className="text-[0.65rem] font-semibold uppercase tracking-wider text-white/50">
+    <div className="rounded-lg border border-border bg-muted/50 px-3 py-2 text-center">
+      <dt className="text-[0.65rem] font-semibold uppercase tracking-wider text-muted-foreground">
         {label}
       </dt>
-      <dd className="mt-1 text-xs font-semibold text-white sm:text-sm">
+      <dd className="mt-1 text-xs font-semibold text-foreground sm:text-sm">
         {value}
       </dd>
     </div>

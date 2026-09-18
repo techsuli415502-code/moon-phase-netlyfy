@@ -56,16 +56,16 @@ export default function EightPhasesGuide() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[oklch(0.92_0.06_75)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
             The Eight Moon Phases
           </p>
           <h2
             id="eight-phases-heading"
-            className="mt-3 text-3xl font-bold tracking-tight text-white glow-text sm:text-4xl"
+            className="mt-3 text-3xl font-bold tracking-tight text-foreground glow-text sm:text-4xl"
           >
             A Complete Guide to the Eight Moon Phases
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70">
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             Every lunar cycle passes through eight named phases. Each one
             describes how much of the Moon's near side is lit by the Sun as
             seen from Earth. Here they are in order, with what to look for.
@@ -80,7 +80,7 @@ export default function EightPhasesGuide() {
                 key={phase.key}
                 className="glass-card group rounded-2xl p-6 text-center"
               >
-                <div className="flex items-center justify-between text-xs text-white/40">
+                <div className="flex items-center justify-between text-xs text-muted-foreground/80">
                   <span>Phase {i + 1}</span>
                   <span>of 8</span>
                 </div>
@@ -90,13 +90,13 @@ export default function EightPhasesGuide() {
                 >
                   {phase.emoji}
                 </div>
-                <h3 className="mt-4 text-lg font-semibold text-white">
+                <h3 className="mt-4 text-lg font-semibold text-foreground">
                   {phase.name}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/70">
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {detail.meaning}
                 </p>
-                <p className="mt-3 border-t border-white/10 pt-3 text-xs text-white/50">
+                <p className="mt-3 border-t border-border pt-3 text-xs text-muted-foreground">
                   {detail.visibility}
                 </p>
               </article>
@@ -107,7 +107,7 @@ export default function EightPhasesGuide() {
         <div className="mt-12 text-center">
           <Link
             href="/moon-phases"
-            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[oklch(0.92_0.06_75)] to-[oklch(0.85_0.12_75)] px-6 py-3 text-sm font-semibold text-[oklch(0.12_0.02_270)] shadow-[0_0_24px_rgba(255,235,180,0.35)] transition-transform hover:scale-[1.03]"
+            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-accent px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-transform hover:scale-[1.03]"
           >
             Explore the Moon Phases page
           </Link>

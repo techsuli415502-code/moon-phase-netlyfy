@@ -1,0 +1,15 @@
+# Netlify configuration for Moon Phase Emoji (Next.js 16)
+# Docs: https://docs.netlify.com/integrations/frameworks/next-js/
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "false"
+  NEXT_TELEMETRY_DISABLED = "1"
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 /**
  * "Why Does the Moon Change Shape?" explanation section.
  * Plain-English explanation of the geometry behind lunar phases.
@@ -111,12 +109,12 @@ export default function WhyMoonChangesShape() {
                   given night.
                 </p>
                 <div className="mt-6">
-                  <Link
-                    href="/moon-phases"
+                  <a
+                    href="#moon-phases"
                     className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
                   >
                     Read more on Moon Phases
-                  </Link>
+                  </a>
                 </div>
               </div>
 

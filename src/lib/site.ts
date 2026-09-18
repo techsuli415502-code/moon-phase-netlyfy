@@ -39,29 +39,33 @@ export const AUTHOR = {
   bio: "I am Jacob Moses, a content specialist focused on clear, useful explanations of lunar phase information. I spend my time researching the Moon cycle, checking primary sources, and writing explanations that help real readers understand the lunar cycle in plain English. My goal is to make each page helpful on its own, with verified facts, simple wording, and answers to the questions users actually ask. I check every claim against trusted astronomy references before publishing, and I keep content updated as I learn more about the Moon and its phases.",
 };
 
-/** Site navigation */
+/**
+ * Site navigation. Uses hash anchors so links work inside the single-page
+ * preview as well as in production. Each href maps to a section id on the
+ * homepage (e.g. #moon-phases).
+ */
 export const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/moon-phases", label: "Moon Phases" },
-  { href: "/moon-calendar", label: "Moon Calendar" },
-  { href: "/about", label: "About Us" },
-  { href: "/sources", label: "Sources" },
-  { href: "/contact", label: "Contact Us" },
+  { href: "#top", label: "Home" },
+  { href: "#moon-phases", label: "Moon Phases" },
+  { href: "#moon-calendar", label: "Moon Calendar" },
+  { href: "#about", label: "About Us" },
+  { href: "#sources", label: "Sources" },
+  { href: "#contact", label: "Contact Us" },
 ];
 
-/** Footer navigation groups */
+/** Footer navigation groups (also hash-based) */
 export const FOOTER_LINKS = {
   site: [
-    { href: "/", label: "Home" },
-    { href: "/moon-phases", label: "Moon Phases" },
-    { href: "/moon-calendar", label: "Moon Calendar" },
-    { href: "/about", label: "About Us" },
+    { href: "#top", label: "Home" },
+    { href: "#moon-phases", label: "Moon Phases" },
+    { href: "#moon-calendar", label: "Moon Calendar" },
+    { href: "#about", label: "About Us" },
   ],
   legal: [
-    { href: "/contact", label: "Contact Us" },
-    { href: "/sources", label: "Sources" },
-    { href: "/privacy-policy", label: "Privacy Policy" },
-    { href: "/terms-of-use", label: "Terms of Use" },
+    { href: "#contact", label: "Contact Us" },
+    { href: "#sources", label: "Sources" },
+    { href: "#privacy-policy", label: "Privacy Policy" },
+    { href: "#terms-of-use", label: "Terms of Use" },
   ],
 };
 

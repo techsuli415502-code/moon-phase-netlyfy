@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 /**
  * "What Is the Current Phase of the Moon?" section.
  * Explains what the current phase means in plain English.
@@ -52,18 +50,18 @@ export default function WhatIsCurrentPhase() {
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/moon-phases"
+              <a
+                href="#moon-phases"
                 className="inline-flex items-center rounded-lg bg-gradient-to-r from-[oklch(0.92_0.06_75)] to-[oklch(0.85_0.12_75)] px-6 py-3 text-sm font-semibold text-[oklch(0.12_0.02_270)] shadow-[0_0_24px_rgba(255,235,180,0.3)] transition-transform hover:scale-[1.03]"
               >
                 See All Moon Phases
-              </Link>
-              <Link
-                href="/moon-calendar"
+              </a>
+              <a
+                href="#moon-calendar"
                 className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
               >
                 Open Moon Calendar
-              </Link>
+              </a>
             </div>
           </div>
 

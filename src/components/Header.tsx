@@ -1,18 +1,50 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, Moon } from "lucide-react";
 import { NAV_LINKS } from "@/lib/site";
 
+/**
+ * Sticky header with hash-based navigation.
+ * Links scroll to sections on the same page so they work in the preview
+ * sandbox as well as in production deployments.
+ */
 export default function Header() {
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("top");
+
+  // Track active section for nav highlight
+  useEffect(() => {
+    const sectionIds = NAV_LINKS.map((l) => l.href.replace("#", ""));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        }
+      },
+      { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
+    );
+
+    for (const id of sectionIds) {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    }
+    return () => observer.disconnect();
+  }, []);
 
   function isActive(href: string): boolean {
-    if (href === "/") return pathname === "/";
-    return pathname.startsWith(href);
+    const id = href.replace("#", "");
+    return activeSection === id;
+  }
+
+  function handleClick(href: string) {
+    setOpen(false);
+    // Allow hash to update naturally; smooth scroll handled by CSS
+    if (href === "#top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }
 
   return (
@@ -21,8 +53,9 @@ export default function Header() {
         className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
         aria-label="Main navigation"
       >
-        <Link
-          href="/"
+        <a
+          href="#top"
+          onClick={() => handleClick("#top")}
           className="flex items-center gap-2 text-lg font-bold tracking-tight text-white"
         >
           <span
@@ -34,14 +67,15 @@ export default function Header() {
           <span className="text-base sm:text-lg">
             <span className="gradient-text">Moon Phase Emoji</span>
           </span>
-        </Link>
+        </a>
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-1 md:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
-              <Link
+              <a
                 href={link.href}
+                onClick={() => handleClick(link.href)}
                 className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                   isActive(link.href)
                     ? "bg-white/10 text-white"
@@ -50,7 +84,7 @@ export default function Header() {
                 aria-current={isActive(link.href) ? "page" : undefined}
               >
                 {link.label}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -80,9 +114,9 @@ export default function Header() {
           <ul className="mx-4 mb-3 flex flex-col gap-1 rounded-lg border border-white/10 bg-[oklch(0.1_0.03_275/95%)] p-3 backdrop-blur-lg">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <Link
+                <a
                   href={link.href}
-                  onClick={() => setOpen(false)}
+                  onClick={() => handleClick(link.href)}
                   className={`block rounded-md px-3 py-2.5 text-sm font-medium transition-colors ${
                     isActive(link.href)
                       ? "bg-white/10 text-white"
@@ -91,7 +125,7 @@ export default function Header() {
                   aria-current={isActive(link.href) ? "page" : undefined}
                 >
                   {link.label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

@@ -135,6 +135,54 @@ export default function PrivacyPage() {
 
             <div>
               <h2 className="text-lg font-semibold text-white">
+                Advertising
+              </h2>
+              <p className="mt-3">
+                This site displays ads from a third-party ad network. The ad
+                network may set cookies or use similar technologies on your
+                device to serve and measure ads, and to remember your device
+                across pages. Ads are loaded inside isolated iframes so the
+                ad network's code never has access to this site's main
+                content or to your inputs in the Moon phase tool.
+              </p>
+              <p className="mt-3">
+                Each ad unit is clearly labeled as
+                <span className="text-white"> Advertisement</span>. Ads never
+                cover the navigation, buttons, the live Moon phase tool, or
+                the interactive calendar. On small screens, the wider
+                desktop ad units are hidden so the page stays usable and
+                free of horizontal scrolling.
+              </p>
+              <p className="mt-3">
+                If you want to opt out of interest-based advertising from
+                third-party ad networks, you can do so at
+                {" "}
+                <a
+                  href="https://www.aboutads.info/choices/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[oklch(0.92_0.06_75)] hover:underline"
+                >
+                  aboutads.info/choices
+                </a>{" "}
+                or
+                {" "}
+                <a
+                  href="https://www.youronlinechoices.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[oklch(0.92_0.06_75)] hover:underline"
+                >
+                  youronlinechoices.com
+                </a>
+                . You can also clear your cookies through your browser
+                settings. Blocking ad cookies does not hide the main site
+                content.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-lg font-semibold text-white">
                 Information You Choose to Share
               </h2>
               <p className="mt-3">

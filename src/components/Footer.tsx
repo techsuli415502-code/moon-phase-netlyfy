@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Moon } from "lucide-react";
-import { FOOTER_LINKS, SOURCES, CONTACT_EMAIL } from "@/lib/site";
+import { FOOTER_LINKS, CONTACT_EMAIL } from "@/lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="mt-auto border-t border-white/10 bg-[oklch(0.06_0.02_275/95%)] backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           {/* Brand */}
           <div className="md:col-span-1">
             <Link
@@ -72,27 +72,6 @@ export default function Footer() {
                   {CONTACT_EMAIL}
                 </a>
               </li>
-            </ul>
-          </nav>
-
-          {/* Sources */}
-          <nav aria-label="Footer sources">
-            <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white/50">
-              Our Sources
-            </h2>
-            <ul className="space-y-2">
-              {SOURCES.map((s) => (
-                <li key={s.url}>
-                  <a
-                    href={s.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-white/70 transition-colors hover:text-[oklch(0.92_0.06_75)]"
-                  >
-                    {s.name}
-                  </a>
-                </li>
-              ))}
             </ul>
           </nav>
         </div>

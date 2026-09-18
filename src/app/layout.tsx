@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StarField from "@/components/StarField";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import { SITE_URL, AUTHOR } from "@/lib/site";
+import { SITE_URL, AUTHOR, GOOGLE_SITE_VERIFICATION } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -86,6 +86,14 @@ export const metadata: Metadata = {
     },
   },
   category: "science",
+
+  // Google Search Console verification meta tag.
+  // Renders as: <meta name="google-site-verification" content="..." />
+  // on every page (server-rendered into <head> by Next.js Metadata API).
+  // Update the value in src/lib/site.ts (GOOGLE_SITE_VERIFICATION).
+  verification: {
+    google: GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 export default function RootLayout({

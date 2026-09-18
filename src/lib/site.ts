@@ -8,6 +8,29 @@ export interface SourceRef {
   description: string;
 }
 
+/**
+ * Google Search Console site verification code.
+ *
+ * This is the value that goes inside the
+ *   <meta name="google-site-verification" content="..." />
+ * tag, which is rendered on every page through the root layout. Google
+ * Search Console reads this tag to prove you own the site.
+ *
+ * To update it:
+ *   1. Open Google Search Console (https://search.google.com/search-console)
+ *   2. Add your property (https://currentphasemoon.netlify.app)
+ *   3. Choose "HTML tag" as the verification method
+ *   4. Copy the value from the content="..." attribute
+ *   5. Paste it below (replace the existing string)
+ *   6. Commit and push; Netlify will auto-deploy
+ *   7. In Search Console, click "Verify"
+ *
+ * The value below is a 43-character alphanumeric token from Google
+ * Search Console. Do not invent or fabricate a code.
+ */
+export const GOOGLE_SITE_VERIFICATION =
+  "L4N6NE1WH1hcuB7TWmdUU8HQWWgnFALt05OVjL07b88";
+
 export const SOURCES: SourceRef[] = [
   {
     name: "Moon Phase Emoji",

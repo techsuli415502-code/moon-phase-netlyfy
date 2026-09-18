@@ -100,18 +100,36 @@ export default function PrivacyPage() {
 
             <div>
               <h2 className="text-lg font-semibold text-white">
-                Information We Do Not Collect
+                Google Analytics and Cookies
               </h2>
               <p className="mt-3">
-                We do not run web analytics on this site. We do not use
-                tracking pixels, advertising tags, or third-party marketing
-                scripts. We do not place cookies on your device for tracking,
-                ads, or analytics.
+                This site uses Google Analytics 4 to understand how visitors
+                find and use the site. Google Analytics is a third-party
+                service provided by Google LLC. It places cookies on your
+                device to collect anonymous usage data such as which pages
+                you visit, how long you stay, and a general, anonymized
+                version of your location.
+              </p>
+              <p className="mt-3">
+                We have enabled IP anonymization in Google Analytics. This
+                means your full IP address is never stored by Google. The
+                data we see is aggregated and does not identify you as a
+                person. We use this data to improve the site, not to track
+                individuals.
+              </p>
+              <p className="mt-3">
+                You can opt out of Google Analytics cookies at any time by
+                installing the official Google Analytics opt-out browser
+                add-on, by clearing your cookies through your browser
+                settings, or by enabling the Do Not Track signal in your
+                browser. None of the site content is hidden if you block
+                these cookies.
               </p>
               <p className="mt-3">
                 The Moon phase calculation runs entirely in your browser using
                 your device's local clock. The date and time used to compute
-                the lunar phase never leaves your device.
+                the lunar phase never leaves your device and is never sent to
+                Google Analytics.
               </p>
             </div>
 
@@ -179,8 +197,8 @@ export default function PrivacyPage() {
               <p className="mt-3">
                 You can choose not to use the contact form. You can also clear
                 cookies set by your browser at any time through your browser
-                settings. Since we do not run analytics or ads, there are no
-                tracking cookies from us to clear.
+                settings. You can also install the official Google Analytics
+                opt-out browser add-on to stop the GA cookies from being set.
               </p>
             </div>
 

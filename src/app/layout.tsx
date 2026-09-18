@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StarField from "@/components/StarField";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { SITE_URL, AUTHOR } from "@/lib/site";
 
 const geistSans = Geist({
@@ -134,6 +135,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        <GoogleAnalytics />
         <a href="#main" className="skip-link">
           Skip to main content
         </a>

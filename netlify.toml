@@ -4,6 +4,7 @@
 [build]
   command = "npm run build"
   publish = ".next"
+  install = "npm install"
 
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "false"

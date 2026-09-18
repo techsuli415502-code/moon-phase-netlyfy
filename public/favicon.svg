@@ -1,26 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-    <radialGradient id="moonGrad" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#fff8e0"/>
-      <stop offset="60%" stop-color="#f4e2a8"/>
-      <stop offset="100%" stop-color="#c9a35a"/>
+    <!-- Amber border gradient (matches the site's secondary accent) -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <!-- Violet moon gradient (matches the site's primary accent) -->
+    <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+    <!-- Cream background gradient (matches the site's body background) -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fbf7f0"/>
     </radialGradient>
-    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#b8a0ff" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#b8a0ff" stop-opacity="0"/>
-    </radialGradient>
-    <clipPath id="moonClip">
-      <circle cx="32" cy="32" r="20"/>
-    </clipPath>
+    <!-- Crescent mask: full moon minus an offset circle -->
+    <mask id="crescentMask">
+      <circle cx="32" cy="32" r="16" fill="white"/>
+      <circle cx="39" cy="27" r="13" fill="black"/>
+    </mask>
+    <!-- Soft amber glow for the moon -->
+    <filter id="moonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
   </defs>
-  <circle cx="32" cy="32" r="30" fill="url(#glowGrad)"/>
-  <circle cx="32" cy="32" r="22" fill="#1a1530" stroke="#b8a0ff" stroke-width="0.5" stroke-opacity="0.4"/>
-  <g clip-path="url(#moonClip)">
-    <circle cx="32" cy="32" r="20" fill="url(#moonGrad)"/>
-    <circle cx="22" cy="26" r="2.5" fill="#a88b48" opacity="0.55"/>
-    <circle cx="40" cy="22" r="1.6" fill="#a88b48" opacity="0.45"/>
-    <circle cx="38" cy="40" r="2" fill="#a88b48" opacity="0.5"/>
-    <circle cx="26" cy="42" r="1.4" fill="#a88b48" opacity="0.4"/>
-    <circle cx="44" cy="34" r="1.2" fill="#a88b48" opacity="0.45"/>
+
+  <!-- Outer cream badge -->
+  <circle cx="32" cy="32" r="31" fill="url(#bgGrad)"/>
+
+  <!-- Amber border ring -->
+  <circle cx="32" cy="32" r="30" fill="none" stroke="url(#borderGrad)" stroke-width="1.5"/>
+
+  <!-- Soft amber glow behind moon -->
+  <circle cx="32" cy="32" r="18" fill="#f59e0b" opacity="0.25" filter="url(#moonGlow)"/>
+
+  <!-- Crescent moon (violet) -->
+  <rect x="0" y="0" width="64" height="64" fill="url(#moonGrad)" mask="url(#crescentMask)"/>
+
+  <!-- Decorative sparkle stars (amber) -->
+  <g fill="#f59e0b">
+    <circle cx="13" cy="17" r="1.3"/>
+    <circle cx="51" cy="15" r="1"/>
+    <circle cx="53" cy="45" r="1.4"/>
+    <circle cx="11" cy="49" r="1.1"/>
+    <circle cx="48" cy="51" r="0.9"/>
+  </g>
+
+  <!-- Small 4-point sparkle to the upper-right of the moon -->
+  <g transform="translate(50 24)" fill="#f59e0b">
+    <path d="M 0 -3.5 L 1 -1 L 3.5 0 L 1 1 L 0 3.5 L -1 1 L -3.5 0 L -1 -1 Z"/>
+  </g>
+
+  <!-- Small 4-point sparkle to the lower-left of the moon -->
+  <g transform="translate(14 42) scale(0.7)" fill="#7c3aed">
+    <path d="M 0 -3.5 L 1 -1 L 3.5 0 L 1 1 L 0 3.5 L -1 1 L -3.5 0 L -1 -1 Z"/>
   </g>
 </svg>

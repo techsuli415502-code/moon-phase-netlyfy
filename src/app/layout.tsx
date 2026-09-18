@@ -53,8 +53,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
     ],
-    apple: [{ url: "/favicon.svg" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   alternates: {
     canonical: "/",
@@ -67,12 +70,21 @@ export const metadata: Metadata = {
     siteName: "Moon Phase Emoji",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Moon Phase Emoji - current phase of the moon as an emoji",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Current Phase of the Moon as an Emoji | Moon Phase Today",
     description:
       "See the current phase of the Moon as an emoji. Live lunar phase, illumination, lunar age, and a full moon phase calendar.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -120,12 +132,30 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Moon Phase Emoji",
     url: SITE_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/logo.svg`,
+    },
     founder: { "@type": "Person", name: AUTHOR.name },
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
       email: "techsuli415502@gmail.com",
     },
+  };
+
+  // Logo schema tells Google to use this image as the site's official
+  // logo in search results (knowledge panel, rich snippets).
+  const logoLd = {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    contentUrl: `${SITE_URL}/logo.svg`,
+    url: `${SITE_URL}/logo.svg`,
+    name: "Moon Phase Emoji logo",
+    description:
+      "A crescent moon in deep violet on a cream badge with an amber border, surrounded by amber sparkle stars.",
+    width: { "@type": "QuantitativeValue", value: 240, unitCode: "E37" },
+    height: { "@type": "QuantitativeValue", value: 64, unitCode: "E37" },
   };
 
   return (
@@ -138,6 +168,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(logoLd) }}
         />
       </head>
       <body

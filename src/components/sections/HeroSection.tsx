@@ -1,3 +1,4 @@
+import Link from "next/link";
 import MoonPhaseHero from "@/components/MoonPhaseHero";
 
 /**
@@ -20,7 +21,6 @@ export default function HeroSection() {
 
   return (
     <section
-      id="top"
       aria-labelledby="hero-heading"
       className="relative overflow-hidden px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8"
     >
@@ -44,18 +44,18 @@ export default function HeroSection() {
         <MoonPhaseHero />
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href="#moon-phases"
+          <Link
+            href="/moon-phases"
             className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[oklch(0.92_0.06_75)] to-[oklch(0.85_0.12_75)] px-6 py-3 text-sm font-semibold text-[oklch(0.12_0.02_270)] shadow-[0_0_24px_rgba(255,235,180,0.35)] transition-transform hover:scale-[1.03] sm:w-auto"
           >
             Browse Moon Phases
-          </a>
-          <a
-            href="#moon-calendar"
+          </Link>
+          <Link
+            href="/moon-calendar"
             className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/10 sm:w-auto"
           >
             Open Moon Calendar
-          </a>
+          </Link>
         </div>
 
         <p

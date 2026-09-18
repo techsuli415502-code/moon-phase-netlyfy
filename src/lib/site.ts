@@ -40,32 +40,32 @@ export const AUTHOR = {
 };
 
 /**
- * Site navigation. Uses hash anchors so links work inside the single-page
- * preview as well as in production. Each href maps to a section id on the
- * homepage (e.g. #moon-phases).
+ * Site navigation. Each link points to a dedicated page route so that
+ * clicking "About Us" opens the About page, clicking "Moon Phases"
+ * opens the Moon Phases page, and so on.
  */
 export const NAV_LINKS = [
-  { href: "#top", label: "Home" },
-  { href: "#moon-phases", label: "Moon Phases" },
-  { href: "#moon-calendar", label: "Moon Calendar" },
-  { href: "#about", label: "About Us" },
-  { href: "#sources", label: "Sources" },
-  { href: "#contact", label: "Contact Us" },
+  { href: "/", label: "Home" },
+  { href: "/moon-phases", label: "Moon Phases" },
+  { href: "/moon-calendar", label: "Moon Calendar" },
+  { href: "/about", label: "About Us" },
+  { href: "/sources", label: "Sources" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
-/** Footer navigation groups (also hash-based) */
+/** Footer navigation groups */
 export const FOOTER_LINKS = {
   site: [
-    { href: "#top", label: "Home" },
-    { href: "#moon-phases", label: "Moon Phases" },
-    { href: "#moon-calendar", label: "Moon Calendar" },
-    { href: "#about", label: "About Us" },
+    { href: "/", label: "Home" },
+    { href: "/moon-phases", label: "Moon Phases" },
+    { href: "/moon-calendar", label: "Moon Calendar" },
+    { href: "/about", label: "About Us" },
   ],
   legal: [
-    { href: "#contact", label: "Contact Us" },
-    { href: "#sources", label: "Sources" },
-    { href: "#privacy-policy", label: "Privacy Policy" },
-    { href: "#terms-of-use", label: "Terms of Use" },
+    { href: "/contact", label: "Contact Us" },
+    { href: "/sources", label: "Sources" },
+    { href: "/privacy-policy", label: "Privacy Policy" },
+    { href: "/terms-of-use", label: "Terms of Use" },
   ],
 };
 

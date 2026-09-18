@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Moon } from "lucide-react";
 import { FOOTER_LINKS, SOURCES, CONTACT_EMAIL } from "@/lib/site";
 
@@ -10,8 +11,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-1">
-            <a
-              href="#top"
+            <Link
+              href="/"
               className="flex items-center gap-2 text-base font-bold text-white"
             >
               <span
@@ -21,7 +22,7 @@ export default function Footer() {
                 <Moon className="h-4 w-4" />
               </span>
               <span className="gradient-text">Moon Phase Emoji</span>
-            </a>
+            </Link>
             <p className="mt-3 text-sm leading-relaxed text-white/60">
               Your live guide to the current Moon phase, with the right emoji,
               illumination and lunar cycle info for any day.
@@ -36,12 +37,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {FOOTER_LINKS.site.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-white/70 transition-colors hover:text-[oklch(0.92_0.06_75)]"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -55,12 +56,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {FOOTER_LINKS.legal.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-white/70 transition-colors hover:text-[oklch(0.92_0.06_75)]"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>

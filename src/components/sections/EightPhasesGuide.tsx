@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ALL_PHASES } from "@/lib/moonPhase";
 
 const PHASE_DETAILS: Record<
@@ -49,9 +50,9 @@ const PHASE_DETAILS: Record<
 export default function EightPhasesGuide() {
   return (
     <section
-      id="moon-phases"
+      id="eight-phases"
       aria-labelledby="eight-phases-heading"
-      className="section-padding scroll-mt-20"
+      className="section-padding"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
@@ -104,12 +105,12 @@ export default function EightPhasesGuide() {
         </div>
 
         <div className="mt-12 text-center">
-          <a
-            href="#moon-calendar"
+          <Link
+            href="/moon-phases"
             className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[oklch(0.92_0.06_75)] to-[oklch(0.85_0.12_75)] px-6 py-3 text-sm font-semibold text-[oklch(0.12_0.02_270)] shadow-[0_0_24px_rgba(255,235,180,0.35)] transition-transform hover:scale-[1.03]"
           >
-            Open the Moon Phase Calendar
-          </a>
+            Explore the Moon Phases page
+          </Link>
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AUTHOR } from "@/lib/site";
 
 /**
@@ -19,7 +20,7 @@ export default function AuthorSection() {
     <section
       id="about-specialist"
       aria-labelledby="author-heading"
-      className="section-padding scroll-mt-20"
+      className="section-padding"
     >
       <script
         type="application/ld+json"
@@ -63,24 +64,24 @@ export default function AuthorSection() {
                   {AUTHOR.bio}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a
-                    href="#about"
+                  <Link
+                    href="/about"
                     className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
                   >
                     More About Us
-                  </a>
-                  <a
-                    href="#sources"
+                  </Link>
+                  <Link
+                    href="/sources"
                     className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
                   >
                     View Our Sources
-                  </a>
-                  <a
-                    href="#contact"
+                  </Link>
+                  <Link
+                    href="/contact"
                     className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
                   >
                     Get in Touch
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

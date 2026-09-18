@@ -7,12 +7,8 @@ import MoonCalendarSection from "@/components/sections/MoonCalendarSection";
 import MoonEmojiMeaning from "@/components/sections/MoonEmojiMeaning";
 import WhyMoonChangesShape from "@/components/sections/WhyMoonChangesShape";
 import FAQSection from "@/components/sections/FAQSection";
-import AboutSection from "@/components/sections/AboutSection";
 import AuthorSection from "@/components/sections/AuthorSection";
 import SourcesSection from "@/components/sections/SourcesSection";
-import ContactSection from "@/components/sections/ContactSection";
-import PrivacySection from "@/components/sections/PrivacySection";
-import TermsSection from "@/components/sections/TermsSection";
 
 export default function Home() {
   return (
@@ -26,12 +22,8 @@ export default function Home() {
       <MoonEmojiMeaning />
       <WhyMoonChangesShape />
       <FAQSection />
-      <AboutSection />
       <AuthorSection />
       <SourcesSection />
-      <ContactSection />
-      <PrivacySection />
-      <TermsSection />
     </>
   );
 }

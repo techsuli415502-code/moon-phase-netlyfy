@@ -1,3 +1,4 @@
+import Link from "next/link";
 import MoonCalendar from "@/components/MoonCalendar";
 
 /**
@@ -9,7 +10,7 @@ export default function MoonCalendarSection() {
     <section
       id="moon-calendar"
       aria-labelledby="calendar-heading"
-      className="section-padding scroll-mt-20"
+      className="section-padding"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
@@ -34,12 +35,12 @@ export default function MoonCalendarSection() {
         </div>
 
         <div className="mt-8 text-center">
-          <a
-            href="#top"
+          <Link
+            href="/moon-calendar"
             className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
           >
-            Back to Top
-          </a>
+            Open the Full Moon Calendar
+          </Link>
         </div>
       </div>
     </section>

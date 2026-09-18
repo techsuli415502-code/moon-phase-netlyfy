@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { SOURCES } from "@/lib/site";
 
@@ -10,7 +11,7 @@ export default function SourcesSection() {
     <section
       id="sources"
       aria-labelledby="sources-heading"
-      className="section-padding scroll-mt-20"
+      className="section-padding"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
@@ -57,12 +58,12 @@ export default function SourcesSection() {
         </div>
 
         <div className="mt-10 text-center">
-          <a
-            href="#contact"
+          <Link
+            href="/sources"
             className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
           >
-            Contact Us About Sources
-          </a>
+            View full Sources page
+          </Link>
         </div>
       </div>
     </section>

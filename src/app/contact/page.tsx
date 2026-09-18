@@ -1,0 +1,168 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Mail, MessageSquare, User } from "lucide-react";
+import { CONTACT_EMAIL, SITE_URL } from "@/lib/site";
+import ContactForm from "@/components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Contact Us: Get in Touch with Moon Phase Emoji",
+  description:
+    "Get in touch with the team behind Moon Phase Emoji. Use the contact form for questions, feedback, or corrections about the lunar phase data on the site.",
+  alternates: { canonical: "https://moonphaseemoji.example/contact" },
+  openGraph: {
+    title: "Contact Us: Get in Touch with Moon Phase Emoji",
+    description:
+      "Use the contact form for questions, feedback, or corrections about the lunar phase data on the site.",
+    url: "https://moonphaseemoji.example/contact",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Moon Phase Emoji",
+    description:
+      "Get in touch with the team behind Moon Phase Emoji.",
+  },
+};
+
+export default function ContactPage() {
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Contact Us",
+        item: `${SITE_URL}/contact`,
+      },
+    ],
+  };
+
+  const contactPageLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    url: `${SITE_URL}/contact`,
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageLd) }}
+      />
+
+      <section className="section-padding">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-6 text-sm text-white/60"
+          >
+            <ol className="flex flex-wrap items-center gap-2">
+              <li>
+                <Link
+                  href="/"
+                  className="text-white/60 transition-colors hover:text-[oklch(0.92_0.06_75)]"
+                >
+                  Home
+                </Link>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li className="text-white" aria-current="page">
+                Contact Us
+              </li>
+            </ol>
+          </nav>
+
+          <div className="text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[oklch(0.92_0.06_75)]">
+              Get in Touch
+            </p>
+            <h1 className="mt-3 text-4xl font-bold tracking-tight text-white glow-text-strong sm:text-5xl">
+              Contact Us
+            </h1>
+            <p className="mt-5 text-base leading-relaxed text-white/80">
+              Have a question, correction, or piece of feedback about the Moon
+              phase data on this site? We would love to hear from you. The form
+              below opens your email client with your message ready to send.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            <aside className="space-y-4">
+              <div className="glass-card rounded-2xl p-5">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="grid h-10 w-10 place-items-center rounded-full bg-[oklch(0.55_0.18_285/20%)] text-[oklch(0.92_0.06_75)]"
+                    aria-hidden="true"
+                  >
+                    <Mail className="h-5 w-5" />
+                  </div>
+                  <h2 className="text-base font-semibold text-white">
+                    Email
+                  </h2>
+                </div>
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="mt-3 block break-all text-sm text-[oklch(0.92_0.06_75)] transition-colors hover:text-white"
+                >
+                  {CONTACT_EMAIL}
+                </a>
+              </div>
+
+              <div className="glass-card rounded-2xl p-5">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="grid h-10 w-10 place-items-center rounded-full bg-[oklch(0.55_0.18_285/20%)] text-[oklch(0.92_0.06_75)]"
+                    aria-hidden="true"
+                  >
+                    <MessageSquare className="h-5 w-5" />
+                  </div>
+                  <h2 className="text-base font-semibold text-white">
+                    Feedback
+                  </h2>
+                </div>
+                <p className="mt-3 text-sm text-white/70">
+                  Spotted a typo, a wrong phase emoji, or an unclear
+                  explanation? Let me know. I read every message and update the
+                  site based on real reader feedback.
+                </p>
+              </div>
+
+              <div className="glass-card rounded-2xl p-5">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="grid h-10 w-10 place-items-center rounded-full bg-[oklch(0.55_0.18_285/20%)] text-[oklch(0.92_0.06_75)]"
+                    aria-hidden="true"
+                  >
+                    <User className="h-5 w-5" />
+                  </div>
+                  <h2 className="text-base font-semibold text-white">
+                    Content Specialist
+                  </h2>
+                </div>
+                <p className="mt-3 text-sm text-white/70">
+                  You will reach Jacob Moses, the content specialist behind
+                  Moon Phase Emoji. Most replies arrive within a few days.
+                </p>
+              </div>
+            </aside>
+
+            <div className="lg:col-span-2">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

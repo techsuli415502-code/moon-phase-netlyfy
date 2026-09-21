@@ -3,18 +3,23 @@ import Link from "next/link";
 import LiveMoonWidget from "@/components/LiveMoonWidget";
 import EightPhasesGuide from "@/components/sections/EightPhasesGuide";
 import LunarCycleExplanation from "@/components/sections/LunarCycleExplanation";
+import {
+  AdSlotLeaderboard,
+  AdSlotRectangle,
+  AdSlotRectangleCompact,
+} from "@/components/AdSlots";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Moon Phases: The Eight Lunar Phases Explained",
   description:
     "Learn the eight moon phases in order, from New Moon to Full Moon and back. See the current lunar phase, what each phase means, and how the lunar cycle works.",
-  alternates: { canonical: "https://moonphaseemoji.example/moon-phases" },
+  alternates: { canonical: `${SITE_URL}/moon-phases` },
   openGraph: {
     title: "Moon Phases: The Eight Lunar Phases Explained",
     description:
       "Learn the eight moon phases in order, from New Moon to Full Moon and back. See the current lunar phase and how the lunar cycle works.",
-    url: "https://moonphaseemoji.example/moon-phases",
+    url: `${SITE_URL}/moon-phases`,
     type: "website",
   },
   twitter: {
@@ -113,8 +118,21 @@ export default function MoonPhasesPage() {
         </div>
       </section>
 
+      {/* High-visibility rectangle right after the live Moon widget -
+          catches users who just checked the current phase. */}
+      <AdSlotRectangle />
+
       <EightPhasesGuide />
+
+      {/* Mid-content rectangle between the eight phases guide and
+          the lunar cycle explanation - natural break in the
+          reference material. */}
+      <AdSlotRectangleCompact />
+
       <LunarCycleExplanation />
+
+      {/* Desktop leaderboard before the call-to-action card. */}
+      <AdSlotLeaderboard />
 
       <section className="section-padding">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

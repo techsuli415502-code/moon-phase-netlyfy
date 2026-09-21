@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AdSlotRectangle, AdSlotLeaderboard } from "@/components/AdSlots";
 import { AUTHOR, CONTACT_EMAIL, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Us: Why We Built Moon Phase Emoji",
   description:
     "Learn why Moon Phase Emoji exists, our mission to make lunar phase data simple and useful, and meet the content specialist behind the site.",
-  alternates: { canonical: "https://moonphaseemoji.example/about" },
+  alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     title: "About Us: Why We Built Moon Phase Emoji",
     description:
       "Learn why Moon Phase Emoji exists, our mission, and meet the content specialist behind the site.",
-    url: "https://moonphaseemoji.example/about",
+    url: `${SITE_URL}/about`,
     type: "website",
   },
   twitter: {
@@ -126,6 +127,10 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Rectangle between the mission section and the author bio -
+          natural break between two content sections. */}
+      <AdSlotRectangle />
+
       <section className="section-padding">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="glass-card relative overflow-hidden rounded-2xl p-6 sm:p-10">
@@ -188,6 +193,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Desktop leaderboard above the footer - last visible placement
+          before the page ends. */}
+      <AdSlotLeaderboard />
     </>
   );
 }

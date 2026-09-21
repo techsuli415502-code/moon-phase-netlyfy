@@ -109,7 +109,7 @@ export default function EightPhasesGuide() {
             href="/moon-phases"
             className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-accent px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-transform hover:scale-[1.03]"
           >
-            Explore the Moon Phases page
+            See all moon phases explained
           </Link>
         </div>
       </div>

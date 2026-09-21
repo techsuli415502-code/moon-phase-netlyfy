@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
@@ -7,38 +8,157 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const FAQS = [
+const FAQS: { q: string; a: React.ReactNode }[] = [
   {
     q: "What is the current phase of the Moon right now?",
-    a: "The live Moon phase shown at the top of this page is the current phase, calculated from today's date and time. It updates on its own as the Moon moves through its cycle. You can also check the Moon calendar for any specific day.",
+    a: (
+      <>
+        The live Moon phase shown at the top of this page is the
+        <strong> current moon phase</strong>, calculated from today&apos;s
+        date and time. It updates on its own as the Moon moves through its
+        cycle. You can also check the{" "}
+        <Link
+          href="/moon-calendar"
+          className="text-primary hover:underline font-medium"
+        >
+          moon phase calendar
+        </Link>{" "}
+        for any specific day.
+      </>
+    ),
   },
   {
     q: "How is the current Moon phase calculated?",
-    a: "We use the standard synodic month of about 29.53 days. The Moon starts a new cycle from a known New Moon, then we count how many days have passed since that point. The day count maps to one of the eight named phases. This is the same method used by most astronomy references.",
+    a: (
+      <>
+        We use the standard synodic month of about 29.53 days. The Moon
+        starts a new cycle from a known New Moon, then we count how many
+        days have passed since that point. The day count maps to one of the
+        eight named phases you can read about in our{" "}
+        <Link
+          href="/moon-phases"
+          className="text-primary hover:underline font-medium"
+        >
+          moon phases explained
+        </Link>{" "}
+        guide. This is the same method used by most astronomy references.
+      </>
+    ),
   },
   {
     q: "What moon emoji should I use today?",
-    a: "Use the moon emoji shown in the hero section. It matches the current lunar phase for your date and time. Each phase has its own emoji, so checking the live phase first helps you pick the right one for your message or post.",
+    a: (
+      <>
+        Use the moon emoji shown in the hero section. It matches{" "}
+        <strong>today&apos;s moon phase</strong> for your date and time.
+        Each phase has its own emoji, so checking the live phase first helps
+        you pick the right one for your message or post.
+      </>
+    ),
   },
   {
     q: "What does waxing or waning mean?",
-    a: "Waxing means the lit part of the Moon is growing larger each night, moving from New Moon toward Full Moon. Waning means the lit part is shrinking, moving from Full Moon back toward New Moon. The terms come from very old English and still describe the lunar cycle today.",
+    a: (
+      <>
+        Waxing means the lit part of the Moon is growing larger each night,
+        moving from New Moon toward Full Moon. Waning means the lit part is
+        shrinking, moving from Full Moon back toward New Moon. The terms
+        come from very old English and still describe the lunar cycle today.
+      </>
+    ),
+  },
+  {
+    q: "When is the next full moon?",
+    a: (
+      <>
+        The next full moon is shown in the current phase card above, in the
+        &ldquo;Next Full Moon&rdquo; stat. For an exact date, open the{" "}
+        <Link
+          href="/moon-calendar"
+          className="text-primary hover:underline font-medium"
+        >
+          moon phase calendar
+        </Link>{" "}
+        and step forward through the months until you see the full moon
+        emoji on a day near today.
+      </>
+    ),
+  },
+  {
+    q: "When is the next new moon?",
+    a: (
+      <>
+        The next new moon is shown in the current phase card above, in the
+        &ldquo;Next New Moon&rdquo; stat. To see the exact date, open the{" "}
+        <Link
+          href="/moon-calendar"
+          className="text-primary hover:underline font-medium"
+        >
+          moon phase calendar
+        </Link>{" "}
+        and look for the new moon emoji in the coming days.
+      </>
+    ),
   },
   {
     q: "How long does one Moon phase last?",
-    a: "Each named phase lasts roughly three to four days before blending into the next one. The full synodic cycle takes about 29.53 days from one New Moon to the next. So the Moon spends around a quarter of the cycle in each main quarter phase.",
+    a: (
+      <>
+        Each named phase lasts roughly three to four days before blending
+        into the next one. The full synodic cycle takes about 29.53 days
+        from one New Moon to the next. So the Moon spends around a quarter
+        of the cycle in each main quarter phase.
+      </>
+    ),
   },
   {
     q: "Why is the Moon sometimes visible during the day?",
-    a: "The Moon is up during the day just as often as it is up at night. It depends on where it sits in its orbit. A First Quarter Moon rises around noon and sets around midnight. A Third Quarter Moon rises near midnight and sets near noon. The bright sky just makes the Moon harder to spot during the day.",
+    a: (
+      <>
+        The Moon is up during the day just as often as it is up at night.
+        It depends on where it sits in its orbit. A First Quarter Moon
+        rises around noon and sets around midnight. A Third Quarter Moon
+        rises near midnight and sets near noon. The bright sky just makes
+        the Moon harder to spot during the day.
+      </>
+    ),
   },
   {
     q: "Does the Moon actually change shape?",
-    a: "No. The Moon is always a round ball in space. The shape we see changes because of the angle between the Sun, the Moon, and Earth. As the Moon orbits us, we see different slices of its sunlit half. The Moon itself stays the same.",
+    a: (
+      <>
+        No. The Moon is always a round ball in space. The shape we see
+        changes because of the angle between the Sun, the Moon, and Earth.
+        As the Moon orbits us, we see different slices of its sunlit half.
+        The Moon itself stays the same. Read more in our{" "}
+        <Link
+          href="/moon-phases"
+          className="text-primary hover:underline font-medium"
+        >
+          moon phases explained
+        </Link>{" "}
+        guide.
+      </>
+    ),
   },
   {
     q: "Is the data on this site accurate?",
-    a: "The Moon phase tool on this site uses a standard lunar calculation. It is good enough for general reference, learning, and choosing the right moon emoji. For exact astronomical data, like the precise minute of a moonrise, you may want to cross-check with the sources we list.",
+    a: (
+      <>
+        The Moon phase tool on this site uses a standard lunar
+        calculation. It is good enough for general reference, learning, and
+        choosing the right moon emoji. For exact astronomical data, like
+        the precise minute of a moonrise, you may want to cross-check with
+        the{" "}
+        <Link
+          href="/sources"
+          className="text-primary hover:underline font-medium"
+        >
+          sources we list
+        </Link>
+        .
+      </>
+    ),
   },
 ];
 
@@ -56,7 +176,7 @@ export default function FAQSection() {
           </p>
           <h2
             id="faq-heading"
-            className="mt-3 text-3xl font-bold tracking-tight text-foreground glow-text sm:text-4xl"
+            className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
           >
             Frequently Asked Questions
           </h2>

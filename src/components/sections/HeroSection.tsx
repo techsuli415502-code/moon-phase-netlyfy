@@ -1,5 +1,6 @@
 import Link from "next/link";
 import MoonPhaseHero from "@/components/MoonPhaseHero";
+import { SITE_URL } from "@/lib/site";
 
 /**
  * Homepage hero section.
@@ -14,7 +15,7 @@ export default function HeroSection() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://moonphaseemoji.example/",
+        item: `${SITE_URL}/`,
       },
     ],
   };

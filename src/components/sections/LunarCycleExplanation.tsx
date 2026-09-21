@@ -2,6 +2,8 @@
  * Lunar Cycle explanation section.
  * Walks the reader through the full synodic cycle.
  */
+import Link from "next/link";
+
 export default function LunarCycleExplanation() {
   const steps = [
     {
@@ -75,7 +77,14 @@ export default function LunarCycleExplanation() {
             The lunar cycle, also called the synodic month, is the journey the
             Moon takes from one New Moon to the next. It takes about 29.53
             days. As the Moon orbits Earth, we see different slices of its
-            sunlit side. Here is the full cycle in order.
+            sunlit side. To look up any date in the cycle, open our{" "}
+            <Link
+              href="/moon-calendar"
+              className="text-primary hover:underline font-medium"
+            >
+              moon phase calendar
+            </Link>{" "}
+            and tap any day. Here is the full cycle in order.
           </p>
         </div>
 

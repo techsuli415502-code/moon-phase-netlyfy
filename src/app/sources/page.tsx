@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
+import { AdSlotRectangle } from "@/components/AdSlots";
 import { SOURCES, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Our Sources for Moon Phase Data",
   description:
     "The trusted references we use for Moon phase data on this site. A short, verified source list you can check yourself.",
-  alternates: { canonical: "https://moonphaseemoji.example/sources" },
+  alternates: { canonical: `${SITE_URL}/sources` },
   openGraph: {
     title: "Our Sources for Moon Phase Data",
     description:
       "The trusted references we use for Moon phase data on this site. A short, verified source list you can check yourself.",
-    url: "https://moonphaseemoji.example/sources",
+    url: `${SITE_URL}/sources`,
     type: "website",
   },
   twitter: {
@@ -117,6 +118,10 @@ export default function SourcesPage() {
               </article>
             ))}
           </div>
+
+          {/* Rectangle between the source list and the "why a short
+              source list" callout - natural break. */}
+          <AdSlotRectangle />
 
           <div className="mt-10">
             <div className="glass-card rounded-2xl p-6 sm:p-8">

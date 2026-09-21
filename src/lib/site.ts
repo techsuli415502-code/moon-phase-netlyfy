@@ -93,4 +93,4 @@ export const FOOTER_LINKS = {
 };
 
 /** Site domain used for canonical URLs and OG tags */
-export const SITE_URL = "https://moonphaseemoji.example";
+export const SITE_URL = "https://todaymoonemoji.robert123kel.workers.dev";

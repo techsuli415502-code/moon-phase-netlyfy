@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AdSlotRectangle } from "@/components/AdSlots";
 import { CONTACT_EMAIL, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
   description:
     "Read the Moon Phase Emoji terms of use. We explain how the site is provided, the limits of liability, and how the lunar data should be used.",
-  alternates: { canonical: "https://moonphaseemoji.example/terms-of-use" },
+  alternates: { canonical: `${SITE_URL}/terms-of-use` },
   openGraph: {
     title: "Terms of Use | Moon Phase Emoji",
     description:
       "Read the Moon Phase Emoji terms of use and the limits of liability for the lunar data on the site.",
-    url: "https://moonphaseemoji.example/terms-of-use",
+    url: `${SITE_URL}/terms-of-use`,
     type: "website",
   },
   twitter: {
@@ -224,6 +225,12 @@ export default function TermsPage() {
                 .
               </p>
             </div>
+          </div>
+
+          {/* Mid-content rectangle - natural break in the long-form
+              terms of use text. */}
+          <div className="my-10">
+            <AdSlotRectangle />
           </div>
 
           <div className="mt-10">

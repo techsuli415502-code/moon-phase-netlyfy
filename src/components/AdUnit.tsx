@@ -9,13 +9,13 @@ import { useId, useState, memo } from "react";
  */
 const AD_UNITS = {
   "300x250": {
-    key: "8e6784bfad4e0698c5b63b7bd3c480cf",
+    key: "be62dbe03434f8ff9d36359f92b27f30",
     width: 300,
     height: 250,
     label: "Advertisement",
   },
   "728x90": {
-    key: "12ea7747f25c072cff94f8a0d070e6e4",
+    key: "7c6723eb78f85e029f2622b8b4d94239",
     width: 728,
     height: 90,
     label: "Advertisement",

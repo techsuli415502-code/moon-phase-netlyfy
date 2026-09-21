@@ -28,7 +28,12 @@ export default function WhatIsCurrentPhase() {
                 The current phase of the Moon tells you how the Moon looks from
                 Earth right now. The Moon itself does not actually change
                 shape. It stays the same size. What changes is the angle
-                between the Sun, the Moon, and where you stand on Earth.
+                between the Sun, the Moon, and where you stand on Earth. If
+                you want a deeper look at every step, our{" "}
+                <Link href="/moon-phases" className="text-primary hover:underline font-medium">
+                  moon phases explained
+                </Link>{" "}
+                page walks through all eight phases in order.
               </p>
               <p>
                 As the Moon moves around our planet, sunlight lights up
@@ -40,9 +45,13 @@ export default function WhatIsCurrentPhase() {
               <p>
                 When you check the live Moon phase above, you are seeing the
                 exact slice of lit Moon visible tonight. The matching emoji
-                gives you a quick visual you can copy and share. The phase
-                shifts slowly, so the emoji can stay the same for a few days,
-                then move on to the next step.
+                gives you a quick visual you can copy and share. To see
+                today&apos;s moon phase on any other date, open our{" "}
+                <Link href="/moon-calendar" className="text-primary hover:underline font-medium">
+                  moon phase calendar
+                </Link>{" "}
+                and tap any day. The phase shifts slowly, so the emoji can
+                stay the same for a few days, then move on to the next step.
               </p>
               <p>
                 If you have ever wondered why the Moon looks different from one

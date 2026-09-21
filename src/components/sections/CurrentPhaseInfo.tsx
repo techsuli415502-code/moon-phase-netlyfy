@@ -8,6 +8,7 @@ import type { MoonPhaseData } from "@/lib/moonPhase";
  * Current Moon Phase information card.
  * Shows detailed stats about the current phase in a glass card grid.
  */
+import Link from "next/link";
 export default function CurrentPhaseInfo() {
   const [phase, setPhase] = useState<MoonPhaseData | null>(null);
 
@@ -92,8 +93,13 @@ export default function CurrentPhaseInfo() {
             Current Moon Phase Information
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            Here is the full breakdown of the Moon right now. Every stat below
-            updates on its own as the lunar cycle moves forward.
+            Here is the full breakdown of the Moon right now. Every stat
+            below updates on its own as the lunar cycle moves forward. To
+            see the{" "}
+            <Link href="/moon-calendar" className="text-primary hover:underline font-medium">
+              moon phase calendar
+            </Link>{" "}
+            for any day of any month, open the calendar page.
           </p>
         </div>
 

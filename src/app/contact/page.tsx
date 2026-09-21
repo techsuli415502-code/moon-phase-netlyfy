@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Mail, MessageSquare, User } from "lucide-react";
+import { AdSlotRectangle } from "@/components/AdSlots";
 import { CONTACT_EMAIL, SITE_URL } from "@/lib/site";
 import ContactForm from "@/components/ContactForm";
 
@@ -8,12 +9,12 @@ export const metadata: Metadata = {
   title: "Contact Us: Get in Touch with Moon Phase Emoji",
   description:
     "Get in touch with the team behind Moon Phase Emoji. Use the contact form for questions, feedback, or corrections about the lunar phase data on the site.",
-  alternates: { canonical: "https://moonphaseemoji.example/contact" },
+  alternates: { canonical: `${SITE_URL}/contact` },
   openGraph: {
     title: "Contact Us: Get in Touch with Moon Phase Emoji",
     description:
       "Use the contact form for questions, feedback, or corrections about the lunar phase data on the site.",
-    url: "https://moonphaseemoji.example/contact",
+    url: `${SITE_URL}/contact`,
     type: "website",
   },
   twitter: {
@@ -163,6 +164,10 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Rectangle below the contact form - placed after the form so
+          it never interferes with form interaction. */}
+      <AdSlotRectangle />
     </>
   );
 }

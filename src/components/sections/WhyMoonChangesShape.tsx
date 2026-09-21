@@ -115,7 +115,7 @@ export default function WhyMoonChangesShape() {
                     href="/moon-phases"
                     className="inline-flex items-center rounded-lg border border-border bg-muted/50 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
                   >
-                    Read more on Moon Phases
+                    See all moon phases explained
                   </Link>
                 </div>
               </div>

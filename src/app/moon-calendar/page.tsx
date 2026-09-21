@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MoonCalendar from "@/components/MoonCalendar";
 import LiveMoonWidget from "@/components/LiveMoonWidget";
+import {
+  AdSlotLeaderboard,
+  AdSlotRectangle,
+  AdSlotRectangleCompact,
+} from "@/components/AdSlots";
 import { ALL_PHASES } from "@/lib/moonPhase";
 import { SITE_URL } from "@/lib/site";
 
@@ -9,12 +14,12 @@ export const metadata: Metadata = {
   title: "Moon Phase Calendar: Daily Lunar Phases",
   description:
     "Interactive moon phase calendar with the daily lunar phase for any month. Tap a day to see the moon emoji, illumination, lunar age, and more.",
-  alternates: { canonical: "https://moonphaseemoji.example/moon-calendar" },
+  alternates: { canonical: `${SITE_URL}/moon-calendar` },
   openGraph: {
     title: "Moon Phase Calendar: Daily Lunar Phases",
     description:
       "Interactive moon phase calendar with the daily lunar phase for any month. Tap a day to see the moon emoji and full lunar snapshot.",
-    url: "https://moonphaseemoji.example/moon-calendar",
+    url: `${SITE_URL}/moon-calendar`,
     type: "website",
   },
   twitter: {
@@ -95,6 +100,11 @@ export default function MoonCalendarPage() {
         </div>
       </section>
 
+      {/* Rectangle right after the interactive calendar - high-value
+          placement because users who just used the tool are
+          naturally transitioning to next steps. */}
+      <AdSlotRectangle />
+
       <section className="pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-3">
@@ -136,6 +146,10 @@ export default function MoonCalendarPage() {
           </div>
         </div>
       </section>
+
+      {/* Desktop leaderboard between the "how to read" section and
+          the legend section - mid-page high-visibility placement. */}
+      <AdSlotLeaderboard />
 
       <section className="section-padding">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

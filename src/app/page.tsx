@@ -20,37 +20,51 @@ export default function Home() {
     <>
       <HeroSection />
 
-      {/* Desktop leaderboard after hero. Hidden on mobile so a
-          728px iframe never overflows the phone viewport. */}
+      {/* Desktop leaderboard right after the hero - high-visibility
+          placement visible without scrolling on most desktop screens.
+          Hidden on mobile so the 728px iframe never overflows. */}
       <AdSlotLeaderboard />
 
       <CurrentPhaseInfo />
       <WhatIsCurrentPhase />
 
-      {/* In-content rectangle between two text sections. */}
+      {/* In-content rectangle between two text sections - natural
+          break between the "what is the current phase" explainer
+          and the eight phases guide. */}
       <AdSlotRectangleCompact />
 
       <EightPhasesGuide />
 
       {/* Rectangle between the eight phases guide and the cycle
-          explanation. */}
+          explanation - natural divider between reference content. */}
       <AdSlotRectangle />
 
       <LunarCycleExplanation />
       <MoonCalendarSection />
+
+      {/* Rectangle right after the interactive calendar - users who
+          just finished using the tool are a high-value ad audience. */}
+      <AdSlotRectangle />
+
       <MoonEmojiMeaning />
 
-      {/* Second leaderboard before the deeper content. Desktop only. */}
+      {/* Second leaderboard - between the emoji meaning and the
+          "why does the moon change shape" explainer. Desktop only. */}
       <AdSlotLeaderboard />
 
       <WhyMoonChangesShape />
       <FAQSection />
 
-      {/* Final rectangle before the author/sources sections. */}
+      {/* Rectangle between the FAQ and the author bio - natural
+          transition from informational to trust-building content. */}
       <AdSlotRectangle />
 
       <AuthorSection />
       <SourcesSection />
+
+      {/* Final leaderboard above the footer - last-chance placement
+          before the user leaves the page. Desktop only. */}
+      <AdSlotLeaderboard />
     </>
   );
 }

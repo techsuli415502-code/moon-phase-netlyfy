@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AUTHOR } from "@/lib/site";
+import { AUTHOR, SITE_URL } from "@/lib/site";
 
 /**
  * E-E-A-T section: About the Content Specialist.
@@ -13,7 +13,7 @@ export default function AuthorSection() {
     name: AUTHOR.name,
     jobTitle: AUTHOR.role,
     description: AUTHOR.bio,
-    url: "https://moonphaseemoji.example/about",
+    url: `${SITE_URL}/about`,
   };
 
   return (
@@ -62,6 +62,30 @@ export default function AuthorSection() {
               <div className="flex-1">
                 <p className="text-base leading-relaxed text-foreground">
                   {AUTHOR.bio}
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  Want to dig deeper? Check the{" "}
+                  <Link
+                    href="/"
+                    className="text-primary hover:underline font-medium"
+                  >
+                    today&apos;s moon phase
+                  </Link>{" "}
+                  at the top of this page, browse the{" "}
+                  <Link
+                    href="/moon-phases"
+                    className="text-primary hover:underline font-medium"
+                  >
+                    moon phases explained
+                  </Link>{" "}
+                  guide, or open the{" "}
+                  <Link
+                    href="/moon-calendar"
+                    className="text-primary hover:underline font-medium"
+                  >
+                    moon phase calendar
+                  </Link>{" "}
+                  to look up any date.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Link

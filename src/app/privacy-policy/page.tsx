@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AdSlotRectangle, AdSlotLeaderboard } from "@/components/AdSlots";
 import { CONTACT_EMAIL, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Read the Moon Phase Emoji privacy policy. We explain what information we collect, how we use it, and your rights as a visitor.",
-  alternates: { canonical: "https://moonphaseemoji.example/privacy-policy" },
+  alternates: { canonical: `${SITE_URL}/privacy-policy` },
   openGraph: {
     title: "Privacy Policy | Moon Phase Emoji",
     description:
       "Read the Moon Phase Emoji privacy policy and your rights as a visitor.",
-    url: "https://moonphaseemoji.example/privacy-policy",
+    url: `${SITE_URL}/privacy-policy`,
     type: "website",
   },
   twitter: {
@@ -278,6 +279,12 @@ export default function PrivacyPage() {
                 .
               </p>
             </div>
+          </div>
+
+          {/* Mid-content rectangle - natural break in the long-form
+              privacy policy text. */}
+          <div className="my-10">
+            <AdSlotRectangle />
           </div>
 
           <div className="mt-10">

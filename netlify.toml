@@ -1,5 +1,10 @@
 # Netlify configuration for Moon Phase Emoji (Next.js 16)
 # Docs: https://docs.netlify.com/integrations/frameworks/next-js/
+#
+# This site is being redirected to https://moonphaseemoji.com/ using a
+# permanent 301 redirect. Every URL on this Netlify deployment redirects
+# to the main site. The Next.js build still runs (so the deploy succeeds),
+# but at runtime all user-facing URLs are redirected.
 
 [build]
   command = "npm run build"
@@ -14,3 +19,20 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Catch-all 301 redirect to the main site.
+# force = true so it overrides any routes the Next.js plugin would
+# otherwise serve. /_next/* static asset paths are excluded so the
+# Next.js plugin can still serve them during the build's internal
+# steps; at runtime every other URL is redirected.
+[[redirects]]
+  from = "/_next/static/*"
+  to = "/_next/static/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "https://moonphaseemoji.com/"
+  status = 301
+  force = true
